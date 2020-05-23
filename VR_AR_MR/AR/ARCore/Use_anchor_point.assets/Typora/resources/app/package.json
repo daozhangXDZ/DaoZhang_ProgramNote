@@ -1,0 +1,12 @@
+{
+    "name": "Typora",
+    "description": "A minimal markdown reading and writing app",
+    "version": "0.9.70",
+    "main": "atom.asar/atom.js",
+    "family": "abnerworks",
+    "private": true,
+    "author": "typora.io",
+    "homepage": "https://typora.io",
+    "concat": "hi@typora.io",
+    "releaseId": "b0f8700"
+}

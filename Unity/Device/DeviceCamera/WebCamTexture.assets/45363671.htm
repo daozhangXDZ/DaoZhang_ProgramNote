@@ -1,0 +1,3968 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <link rel="canonical" href="https://blog.csdn.net/yupu56/article/details/45363671"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="referrer" content="always">
+    <meta http-equiv="Cache-Control" content="no-siteapp" /><link rel="alternate" media="handheld" href="#" />
+    <meta name="shenma-site-verification" content="5a59773ab8077d4a62bf469ab966a63b_1497598848">
+        <meta name="csdn-baidu-search"  content='{"autorun":true,"install":true,"keyword":"Unity5.0 WebCamTexture 调用外部摄像头 - Passion 的博客"}'>
+    
+    <link href="https://csdnimg.cn/public/favicon.ico" rel="SHORTCUT ICON">
+    <title>Unity5.0 WebCamTexture 调用外部摄像头 - Passion 的博客 - CSDN博客</title>
+
+        
+                    <link rel="stylesheet" href="https://csdnimg.cn/release/phoenix/template/css/detail-e58e15efab.min.css">
+            
+        
+            <link rel="stylesheet" href="https://csdnimg.cn/release/phoenix/themes/skin-blackboard/skin-blackboard-1340d63bd5.min.css">
+        <script type="text/javascript">
+        var username = "qq563129582";
+        var blog_address = "https://blog.csdn.net/yupu56";
+        var static_host = "https://csdnimg.cn/release/phoenix/";
+        var currentUserName = "";
+        var isShowAds = true;
+        var isOwner = false;
+        var loginUrl = "http://passport.csdn.net/account/login?from=https://blog.csdn.net/yupu56/article/details/45363671"
+        var blogUrl = "https://blog.csdn.net/";
+
+        var curSkin = "skin-blackboard";
+        // 第四范式所需数据
+        var articleTitles = "Unity5.0 WebCamTexture 调用外部摄像头 - Passion 的博客";
+        
+        var nickName = "PassionY";
+        var isCorporate = false;
+        var subDomainBlogUrl = "https://blog.csdn.net/"
+        var digg_base_url = "https://blog.csdn.net/yupu56/phoenix/comment";
+        var articleDetailUrl = "https://blog.csdn.net/qq563129582/article/details/45363671";
+    </script>
+    <script src="https://csdnimg.cn/public/common/libs/jquery/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script src="https://csdnimg.cn/rabbit/exposure-click/main-1.0.6.js"></script>
+    <script src="//g.csdnimg.cn/??fixed-sidebar/1.1.3/fixed-sidebar.js,track/1.2.6/track.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://csdnimg.cn/public/sandalstrap/1.4/css/sandalstrap.min.css">
+    <style>
+        .MathJax, .MathJax_Message, .MathJax_Preview{
+            display: none
+        }
+    </style>
+</head>
+<body class="nodata " > 
+    <link rel="stylesheet" href="https://csdnimg.cn/public/common/toolbar/content_toolbar_css/content_toolbar.css">
+    <script id="toolbar-tpl-scriptId" src="https://csdnimg.cn/public/common/toolbar/js/content_toolbar.js" type="text/javascript" domain="https://blog.csdn.net/"></script>
+<div id="kp_box_476" data-pid="476" data-track-view='{"mod":"kp_popu_476-845","con":",,"}' data-track-click='{"mod":"kp_popu_476-845","con":",,"}'><script src="//csdnimg.cn/public/common/indexSuperise/1.1.1/indexSuperise.js?20190111165312"></script><script>window.csdn.indexSuperise({smallMoveImg:'https://img-bss.csdn.net/1560331055243.png',bigMoveImg:'https://img-bss.csdn.net/1560331050629.png',link:'https://kunyu.csdn.net?p=476&a=845&c=394&k=&d=1&t=3&dest=https%3A%2F%2Fedu.csdn.net%2Ftopic%2Fpython115%3Futm_source%3Dblogpopup',trackSuperId:416,smallMove:'notMove',trackSId:792});</script></div><link rel="stylesheet" href="https://csdnimg.cn/release/phoenix/template/css/blog_code-c3a0c33d5c.css">
+<link rel="stylesheet" href="https://csdnimg.cn/release/phoenix/vendor/pagination/paging.css">
+<script type="text/javascript">
+	var NEWS_FEED = function(){}
+</script>
+
+<link rel="stylesheet" href="https://csdnimg.cn/release/phoenix/template/css/chart-3456820cac.css" />
+<div class="container clearfix" id="mainBox">
+			<div class="recommend-right">
+  <ul class="recommend-fixed-box">
+    
+  </ul>
+</div>	    <main>
+        <div class="blog-content-box">
+  <div class="article-header-box">
+    <div class="article-header">
+      <div class="article-title-box">
+        <span class="article-type type-1 float-left">原</span>        <h1 class="title-article">Unity5.0 WebCamTexture 调用外部摄像头</h1>
+      </div>
+      <div class="article-info-box">
+        <div class="article-bar-top">
+                                                  <span class="time">2015年04月29日 11:02:54</span>
+          <a class="follow-nickName" href="https://me.csdn.net/qq563129582" target="_blank">PassionY</a>
+          <span class="read-count">阅读数 17254</span>
+          
+                                                      </div>
+        <div class="operating">
+                  </div>
+      </div>
+    </div>
+  </div>
+  <article class="baidu_pl">
+    <div id="article_content" class="article_content clearfix csdn-tracking-statistics" data-pid="blog" data-mod=popu_307 data-dsm="post">
+                                    <div class="article-copyright">
+                                            <svg class="icon" title="CSDN认证原创" aria-hidden="true"
+                             style="width:53px; height: 18px; vertical-align: -4px;">
+                            <use xlink:href="#CSDN_Cert"></use>
+                        </svg>
+                    
+                    版权声明：本文为博主原创文章，转载请注明出处。                    https://blog.csdn.net/qq563129582/article/details/45363671                </div>
+                          <link rel="stylesheet" href="https://csdnimg.cn/release/phoenix/template/css/ck_htmledit_views-cd6c485e8b.css" />
+                              <link rel="stylesheet" href="https://csdnimg.cn/release/phoenix/template/css/ck_htmledit_views-cd6c485e8b.css" />
+          <div class="htmledit_views" id="content_views">
+            
+<p><span style="font-family:Helvetica, Arial, sans-serif;"><span style="font-size:14px;line-height:26px;">一:Unity 中使用WebCamTexture 调用摄像头实现拍照和摄像。</span></span></p>
+<p><span style="font-family:Helvetica, Arial, sans-serif;"><span style="font-size:14px;line-height:26px;"></span></span></p>
+<pre><code class="language-csharp">using UnityEngine;
+using System.Collections;
+using System.IO;
+using System.Runtime.Serialization;
+using System.Runtime .Serialization.Formatters.Binary;
+using System.Threading;
+
+public class takePhoto : MonoBehaviour 
+{
+	public string deviceName;
+	//接收返回的图片数据
+	WebCamTexture tex;
+	public Texture2D _tex;
+
+	void OnGUI()
+	{
+		if (GUI.Button(new Rect(10, 20, 100, 40), "开启摄像头"))
+		{
+			// 调用摄像头
+			StartCoroutine(start());
+		}
+		
+		if(GUI.Button(new Rect(10,70,100,40),"捕获照片"))
+		{
+			//捕获照片
+			tex.Pause();
+			StartCoroutine(getTexture());
+		}
+		
+		if(GUI.Button(new Rect(10,120,100,40),"再次捕获"))
+		{
+			//重新开始
+			tex.Play();
+		}
+		
+		if(GUI.Button(new Rect(120,20,80,40),"录像"))
+		{
+			//录像
+			StartCoroutine(SeriousPhotoes());
+		}
+		
+		if(GUI.Button(new Rect(10,170,100,40),"停止"))
+		{
+			//停止捕获镜头
+			tex.Stop ();
+			StopAllCoroutines();
+		}
+		
+		if(tex!=null)
+		{
+			// 捕获截图大小               —距X左屏距离   |   距Y上屏距离  
+			GUI.DrawTexture(new Rect(Screen.width/2-150,Screen.height/2-190,280,200),tex); 
+		}
+		
+	}
+	
+	/// &lt;summary&gt;
+	/// 捕获窗口位置
+	/// &lt;/summary&gt;
+	public IEnumerator start()
+	{
+		yield return Application.RequestUserAuthorization(UserAuthorization.WebCam);
+		if (Application.HasUserAuthorization(UserAuthorization.WebCam))
+		{
+			WebCamDevice[] devices = WebCamTexture.devices;
+			deviceName= devices[0].name;
+			tex=new WebCamTexture(deviceName,300,300,12);
+			tex.Play();
+		}
+	}
+	
+	/// &lt;summary&gt;
+	/// 获取截图
+	/// &lt;/summary&gt;
+	/// &lt;returns&gt;The texture.&lt;/returns&gt;
+	public IEnumerator getTexture()
+	{
+		yield return new WaitForEndOfFrame();
+		Texture2D t=new Texture2D(400,300);
+		t.ReadPixels( new Rect(Screen.width/2-200,Screen.height/2-50,360,300),0,0,false);
+		//距X左的距离        距Y屏上的距离
+		// t.ReadPixels(new Rect(220, 180, 200, 180), 0, 0, false);
+		t.Apply();
+		byte[] byt=t.EncodeToPNG();
+//		File.WriteAllBytes(Application.dataPath+"/Photoes/"+Time.time+".jpg",byt);
+		tex.Play();
+	}
+	
+	/// &lt;summary&gt;
+	/// 连续捕获照片
+	/// &lt;/summary&gt;
+	/// &lt;returns&gt;The photoes.&lt;/returns&gt;
+	public IEnumerator SeriousPhotoes()
+	{
+		while (true)
+		{
+			yield return new WaitForEndOfFrame();
+			Texture2D t = new Texture2D(400, 300, TextureFormat.RGB24, true);
+			t.ReadPixels(new Rect(Screen.width/2-180,Screen.height/2-50,360,300), 0, 0, false);
+			t.Apply();
+			print(t);
+			byte[] byt = t.EncodeToPNG();
+//			File.WriteAllBytes(Application.dataPath + "/MulPhotoes/" + Time.time.ToString().Split('.')[0] + "_" + Time.time.ToString().Split('.')[1] + ".png", byt);
+			Thread.Sleep(300);
+		}
+	}
+}</code></pre><br /><br /><p></p>
+<p><span style="font-family:Helvetica, Arial, sans-serif;"><span style="font-size:14px;line-height:26px;">二:<span style="font-family:Helvetica, Arial, sans-serif;font-size:14px;line-height:26px;">Unity 中使用WebCamTexture 设置背景为摄像头画面</span></span></span></p>
+<p><span style="font-family:Helvetica, Arial, sans-serif;font-size:14px;line-height:26px;">1在unity的场景中新建一个Quad作为背景，可以自行调节缩放和位置。</span></p>
+<div align="center" style="font-size:14px;line-height:26px;">
+<div align="left" style="font-family:Helvetica, Arial, sans-serif;">
+2.新建一个Material文件夹用来存放Material，在Material里新建一个Material材质，并命名为CamTex。</div>
+<div align="left" style="font-family:Helvetica, Arial, sans-serif;">
+3.选中CamTex材质，在Inspector面板中选择shader的模式为Unlit/Texture。</div>
+<div align="left">
+<p style="font-family:Helvetica, Arial, sans-serif;"><span style="font-family:Helvetica, Arial, sans-serif;font-size:14px;line-height:26px;">4.WebCamQuad：Scale X 设置成负的。如下图<br /></span></p>
+<p style="font-family:Helvetica, Arial, sans-serif;"><span style="font-family:Helvetica, Arial, sans-serif;font-size:14px;line-height:26px;"><img src="" alt="" /></span></p>
+<div align="left" style="font-family:Helvetica, Arial, sans-serif;font-size:14px;line-height:26px;">
+5.将CamWeb脚本和CamTex材质拖到Quad上</div>
+<div align="left" style="font-family:Helvetica, Arial, sans-serif;font-size:14px;line-height:26px;">
+6.将Quad调至摄像机正对位置。</div>
+<div align="left" style="font-size:14px;line-height:26px;">
+<span style="font-family:Helvetica, Arial, sans-serif;">7.新建C#脚本，并将其命名为</span><span style="font-family:Menlo;">WebCamera</span><span style="font-family:Helvetica, Arial, sans-serif;color:rgb(68,68,68);">，双击脚本进行编辑，添加以下代码：</span></div>
+<div align="left" style="font-family:Helvetica, Arial, sans-serif;font-size:14px;line-height:26px;">
+<pre><code class="language-csharp">using UnityEngine;
+using System.Collections;
+using UnityEngine.UI;
+
+public class WebCamera : MonoBehaviour{
+	
+	private WebCamTexture _webcamTexFront;
+	private WebCamTexture _webcamTexBack;
+
+	//前后摄像头
+	public int m_devID = 0;
+	//宽高比
+	public float aspect = 9f/16f;
+	
+	private string m_deviceName;
+	public string m_photoName;
+	public string m_photoPath;
+	// Use this for initialization
+
+	public delegate void onComplete(Sprite sprite);
+
+	public WebCamTexture webCamera
+	{
+		get{
+			m_deviceName=WebCamTexture.devices[m_devID].name;
+
+			if(m_devID==0)
+			{
+				if (_webcamTexBack == null)
+				{
+					// Checks how many and which cameras are available on the device
+					foreach(WebCamDevice device in WebCamTexture.devices){
+						if (!device.isFrontFacing){
+							m_deviceName = device.name;
+							_webcamTexBack = new WebCamTexture (m_deviceName, Screen.width, (int)(Screen.width*aspect));
+						}
+					}
+				}
+				return _webcamTexBack;
+			}
+			else
+			{
+				if (_webcamTexFront == null)
+				{
+					// Checks how many and which cameras are available on the device
+					foreach(WebCamDevice device in WebCamTexture.devices){
+						if (device.isFrontFacing){
+							m_deviceName = device.name;
+							_webcamTexFront = new WebCamTexture (m_deviceName, Screen.width,(int)(Screen.width*aspect));
+						}
+					}
+				}
+				return _webcamTexFront;
+			}
+		}
+	}
+
+	public void cameraSwitch(){
+		// Checks how many and which cameras are available on the device
+		foreach(WebCamDevice device in WebCamTexture.devices){
+			if (m_deviceName!=device.name) 
+			{	
+				webCamera.Stop();
+				m_devID++;
+				if(m_devID&gt;=2) m_devID=0;
+				m_deviceName=device.name;
+
+				Debug.Log("m_devID"+m_devID);
+				Debug.Log("m_deviceName"+m_deviceName);
+
+				webCamera.Play();
+				break;
+			}
+		}
+	}
+	
+	public void takePicture(onComplete callback){
+
+		StartCoroutine(GetTexture(callback));
+	}
+
+	//捕获照片
+	//获取截图
+	public IEnumerator GetTexture(onComplete callback)
+	{
+		webCamera.Pause();
+		yield return new WaitForEndOfFrame();
+		
+		//save
+		Texture2D t=new Texture2D(Screen.width,(int)(Screen.width*aspect));
+		t.ReadPixels(new Rect(0,0,Screen.width,(int)(Screen.width*aspect)),0,0,false);
+		t.Apply();
+		byte[] byt = t.EncodeToPNG();
+		m_photoName = Time.time+".png";
+		m_photoPath = Application.persistentDataPath+"/"+m_photoName;
+		System.IO.File.WriteAllBytes(m_photoPath,byt);
+
+		//load image
+		WWW www = new WWW("file://"+m_photoPath);
+		yield return www;
+		
+		Sprite sprite = Sprite.Create(www.texture, new Rect(0, 0,Screen.width,(int)(Screen.width*aspect)),new Vector2(0.5f, 0.5f));
+		//回调
+		callback(sprite);
+	}
+
+	// 录像
+	// 连续捕获照片
+	public IEnumerator SeriousPhotoes()
+	{
+		while (true)
+		{
+			yield return new WaitForEndOfFrame();
+			Texture2D t = new Texture2D(400, 300, TextureFormat.RGB24, true);
+			t.ReadPixels(new Rect(0,0,Screen.width, (int)(Screen.width*aspect)), 0, 0, false);
+			t.Apply();
+			print(t);
+			byte[] byt = t.EncodeToPNG();
+			System.IO.File.WriteAllBytes(Application.dataPath + "/MulPhotoes/" + Time.time.ToString().Split('.')[0] + "_" + Time.time.ToString().Split('.')[1] + ".png", byt);
+//			using System.Threading;
+//			Thread.Sleep(300);
+		}
+	}
+
+}
+</code></pre>
+<div align="left" style="font-family:Helvetica, Arial, sans-serif;font-size:14px;line-height:26px;">
+8.再<span style="font-size:14px;line-height:26px;font-family:Helvetica, Arial, sans-serif;">新建C#脚本，并将其命名为</span><span style="font-family:Menlo;font-size:14px;line-height:26px;">WebCameManager</span><span style="color:rgb(68,68,68);">，双击脚本进行编辑，添加以下代码</span></div>
+<pre><code class="language-csharp">using UnityEngine;
+using System.Collections;
+using DG.Tweening;
+using UnityEngine.UI;
+
+public class WebCamManager : MonoBehaviour 
+{	
+	public WebCamera m_webCamera;
+	public Transform m_webCamQuad;
+
+	public Image photoPanel;
+	public Image photoImg;
+
+	private bool m_PhotoIng = false;
+
+	private int rotateIndex=1;
+
+	void Start () {
+
+		//相机的初始化
+		m_webCamera=new WebCamera();
+		if(Globe.isPad)
+			m_webCamera.aspect = 3f/4f;
+	}
+
+	// Update is called once per frame
+	void Update () {
+		
+		 //设备的翻转，让Quard也翻转
+		if(Globe.camering){
+			if(m_webCamera.webCamera.videoRotationAngle==180 &amp;&amp; rotateIndex==0){
+				Debug.Log("videoRotationAngle"+m_webCamera.webCamera.videoRotationAngle);
+				rotateIndex=1;
+				m_webCamQuad.localScale=new Vector3(m_webCamQuad.localScale.x*(-1),m_webCamQuad.localScale.y*(-1),m_webCamQuad.localScale.z);
+			}
+			else if(m_webCamera.webCamera.videoRotationAngle==0 &amp;&amp; rotateIndex==1){
+				Debug.Log("videoRotationAngle"+m_webCamera.webCamera.videoRotationAngle);
+				rotateIndex=0;
+				m_webCamQuad.localScale=new Vector3(m_webCamQuad.localScale.x*(-1),m_webCamQuad.localScale.y*(-1),m_webCamQuad.localScale.z);
+			}
+		}
+	}
+
+	void CameraPlay()
+	{
+		if(m_webCamQuad.GetComponent&lt;Renderer&gt; ().material.mainTexture!=m_webCamera.webCamera)
+		{
+			m_webCamQuad.GetComponent&lt;Renderer&gt; ().material.mainTexture =m_webCamera.webCamera;
+		}
+
+		m_webCamera.webCamera.Play();
+	}
+
+	void CameraStop()
+	{
+		m_webCamera.webCamera.Stop();
+	}
+
+	//拍照按钮
+	public void CameraCallBack(GameObject sender){
+
+		CameraPlay();
+
+		Globe.camering=true;
+	}
+
+	//返回按钮
+	public void ReturnCallBack(GameObject sender){
+
+		HidePhotoBackground();
+		CameraStop();
+
+		Globe.camering=false;
+	}
+
+	public void PhotoSwitchCallBack(GameObject sender){
+
+		m_webCamera.cameraSwitch();
+
+		m_webCamQuad.GetComponent&lt;Renderer&gt; ().material.mainTexture =m_webCamera.webCamera;
+		m_webCamQuad.localScale=new Vector3(m_webCamQuad.localScale.x*(-1),m_webCamQuad.localScale.y,m_webCamQuad.localScale.z);
+	}
+	
+	public void PhotoShutterCallBack(GameObject sender){
+		AudioSource audio=m_webCamQuad.GetComponent&lt;AudioSource&gt;();
+		audio.Play();
+
+		m_shutterBtn.gameObject.SetActive(false);
+		m_swithBtn.gameObject.SetActive(false);
+		m_returnBtn.gameObject.SetActive(false);
+		watermark.gameObject.SetActive(true);
+
+		StartCoroutine(m_webCamera.GetTexture(delegate(Sprite sp){
+			watermark.gameObject.SetActive(false);
+
+			photoPanel.gameObject.SetActive(true);
+			photoImg.sprite=sp;
+		}));
+	}
+
+	public void PhotoCloseCallBack(GameObject sender){
+		System.IO.File.Delete(m_webCamera.m_photoPath);
+		Resources.UnloadUnusedAssets();
+
+		CameraPlay();
+		photoPanel.gameObject.SetActive(false);
+
+		m_shutterBtn.gameObject.SetActive(true);
+		m_swithBtn.gameObject.SetActive(true);
+		m_returnBtn.gameObject.SetActive(true);
+	}
+
+	public void PhotoSaveCallBack(GameObject sender){
+		photoPanel.gameObject.SetActive(false);
+		Resources.UnloadUnusedAssets();
+
+		CameraPlay();
+		UnityIOSKit.SaveImageToPhotoAlbum(m_webCamera.m_photoName);
+
+		m_shutterBtn.gameObject.SetActive(true);
+		m_swithBtn.gameObject.SetActive(true);
+		m_returnBtn.gameObject.SetActive(true);
+
+	}
+
+	void HidePhotoBackground(){
+		m_webCamQuad.gameObject.SetActive (false);
+		m_WareBeijing.gameObject.SetActive (true);
+	}
+
+	void ShowPhotoBackground(){
+		m_webCamQuad.gameObject.SetActive (true);
+		m_WareBeijing.gameObject.SetActive (false);
+	}
+}</code></pre></div>
+</div>
+<div align="left" style="font-family:Helvetica, Arial, sans-serif;">
+<br />
+8.点击播放按钮即可调用摄像头，在quad的贴图会显示摄像头中的画面。</div>
+</div>
+          </div>
+                  </div>
+  </article>
+</div>
+
+<div class="hide-article-box hide-article-pos text-center">
+      <a class="" id="btn-readmore" data-track-view='{"mod":"popu_376","con":",https://blog.csdn.net/yupu56/article/details/45363671,"}' data-track-click='{"mod":"popu_376","con":",https://blog.csdn.net/yupu56/article/details/45363671,"}'>
+    展开阅读全文
+    <svg class="icon chevrondown" aria-hidden="true">
+        <use xlink:href="#csdnc-chevrondown"></use>
+      </svg>
+    </a>
+    </div>
+<script>
+  $(".MathJax").remove();
+  if ($('div.markdown_views pre.prettyprint code.hljs').length > 0) {
+    $('div.markdown_views')[0].className = 'markdown_views';
+  }
+</script>        <div id="dmp_ad_58"><div id="kp_box_58" data-pid="58" data-track-view='{"mod":"kp_popu_58-402","con":",,"}' data-track-click='{"mod":"kp_popu_58-402","con":",,"}'><div style="width:100%;background:#fff;border:3px solid #fff;padding:16px 0px 0px 0px;">
+<script type="text/javascript" src="//static.mediav.com/js/mvf_news_feed.js"></script>
+<div id="three_ad1" class="mediav_ad" ></div>
+<script>
+                                               NEWS_FEED({
+                w: 900,
+                h : 100,
+                showid : 'ztvJV8',
+                placeholderId: "three_ad1",
+                inject : 'define',
+                define : {
+                    imagePosition : 'left',
+                    imageBorderRadius : 0,
+                    imageWidth: 90,
+                    imageHeight: 68,
+                    imageFill : 'clip',
+                    displayImage : true,
+                    displayTitle : true,
+                    titleFontSize: 18,
+                    titleFontColor: '#000',
+                    titleFontFamily : 'Lato,-apple-system,SF UI Text,Arial,PingFang SC,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif',
+                    titleFontWeight: 'bold',
+                    titlePaddingTop : 0,
+                    titlePaddingRight : 0,
+                    titlePaddingBottom : 5,
+                    titlePaddingLeft : 16,
+                    displayDesc : true,
+                    descFontSize: 14,
+                    descFontColor: '#8e959a',
+                    descFontFamily : 'Microsoft YaHei',
+                    paddingTop : 10,
+                    paddingRight : 0,
+                    paddingBottom : 0,
+                    paddingLeft : 20,
+                    backgroundColor: '#fff',
+                    hoverColor: '#000'
+                      }
+                  })
+                                        </script>
+</div></div></div>        <a id="commentBox"></a>
+<div class="comment-box">
+	
+	<div class="comment-edit-box d-flex">
+		<a id="commentsedit"></a>
+		<div class="user-img">
+			<a href="javascript:void(0);" target="_blank">
+				<img class="show_loginbox" src="//g.csdnimg.cn/static/user-img/anonymous-User-img.png">
+			</a>
+		</div>
+		<form id="commentform">
+			<input type="hidden" id="comment_replyId">
+			<textarea class="comment-content" name="comment_content" id="comment_content" placeholder="想对作者说点什么"></textarea>
+			<div class="opt-box"> <!-- d-flex -->
+				<div id="ubbtools" class="add_code">
+					<a href="#insertcode" code="code" target="_self"><i class="icon iconfont icon-daima"></i></a>
+				</div>
+				<input type="hidden" id="comment_replyId" name="comment_replyId">
+				<input type="hidden" id="article_id" name="article_id" value="45363671">
+				<input type="hidden" id="comment_userId" name="comment_userId" value="">
+				<input type="hidden" id="commentId" name="commentId" value="">
+				<div style="display: none;" class="csdn-tracking-statistics tracking-click" data-mod="popu_384"><a href="#" target="_blank" class="comment_area_btn">发表评论</a></div>
+				<div class="dropdown" id="myDrap">
+					<a class="dropdown-face d-flex align-items-center" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+					<div class="txt-selected text-truncate">添加代码片</div>
+					<svg class="icon d-block" aria-hidden="true">
+						<use xlink:href="#csdnc-triangledown"></use>
+					</svg>
+					</a>
+					<ul class="dropdown-menu" id="commentCode" aria-labelledby="drop4">
+						<li><a data-code="html">HTML/XML</a></li>
+						<li><a data-code="objc">objective-c</a></li>
+						<li><a data-code="ruby">Ruby</a></li>
+						<li><a data-code="php">PHP</a></li>
+						<li><a data-code="csharp">C</a></li>
+						<li><a data-code="cpp">C++</a></li>
+						<li><a data-code="javascript">JavaScript</a></li>
+						<li><a data-code="python">Python</a></li>
+						<li><a data-code="java">Java</a></li>
+						<li><a data-code="css">CSS</a></li>
+						<li><a data-code="sql">SQL</a></li>
+						<li><a data-code="plain">其它</a></li>
+					</ul>
+				</div>  
+				<div class="right-box">
+					<span id="tip_comment" class="tip">还能输入<em>1000</em>个字符</span>
+					<input type="submit" class="btn btn-sm btn-red btn-comment" value="发表评论">
+				</div>
+			</div>
+		</form>
+	</div>
+
+		<div class="comment-list-container">
+		<a id="comments"></a>
+		<div class="comment-list-box">
+		</div>
+		<div id="commentPage" class="pagination-box d-none"></div>
+		<div class="opt-box text-center">
+			<div class="btn btn-sm btn-link-blue" id="btnMoreComment"></div>
+		</div>
+	</div>
+</div>
+        <div class="recommend-box">
+                            <div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_614","con":",https://blog.csdn.net/qq_28221881/article/details/53820918,BlogCommendFromThirdServiceAll_0"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/qq_28221881/article/details/53820918" target="_blank" title="unity调用摄像头进行拍照和保存照片">
+		<h4 class="text-truncate oneline">
+				unity<em>调用</em><em>摄像头</em>进行拍照和保存照片		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">12-22</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					7093</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/qq_28221881/article/details/53820918" target="_blank" title="unity调用摄像头进行拍照和保存照片">
+				<span class="desc oneline">usingUnityEngine;usingSystem.Collections;usingSystem.IO;usingSystem.Runtime.Serialization;usingSyste...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/qq_28221881">来自：	<span class="blog_title"> 赖张殷-Eagle</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_614","con":",https://blog.csdn.net/Cici_coach/article/details/55193796,BlogCommendFromThirdServiceAll_1"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/Cici_coach/article/details/55193796" target="_blank" title="Unity3D   原生WebCamera实现摄像头显示">
+		<h4 class="text-truncate oneline">
+				Unity3D   原生WebCamera实现<em>摄像头</em>显示		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">02-15</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					1万+</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/Cici_coach/article/details/55193796" target="_blank" title="Unity3D   原生WebCamera实现摄像头显示">
+				<span class="desc oneline">今天为大家分享一下，如何通过WebCamera调用外部的摄像头。  1.首先我们需要简单认识一下，unity有关摄像头需要用到的内置类；   WebCamDevice      官方文档：https:...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/Cici_coach">来自：	<span class="blog_title"> Cici_coach的博客</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_614","con":",https://blog.csdn.net/weixin_34128501/article/details/87676490,BlogCommendFromThirdServiceAll_2"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/weixin_34128501/article/details/87676490" target="_blank" title="（AR）获取摄像头的画面并将其设置为模型贴图之无敌陀螺大回环之实现篇">
+		<h4 class="text-truncate oneline">
+				（AR）获取<em>摄像头</em>的画面并将其设置为模型贴图之无敌陀螺大回环之实现篇		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">09-29</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					23</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/weixin_34128501/article/details/87676490" target="_blank" title="（AR）获取摄像头的画面并将其设置为模型贴图之无敌陀螺大回环之实现篇">
+				<span class="desc oneline">在说之前，先来说说涂涂乐，涂涂乐的原理也类似于获取摄像头的画面，并且通过shader设置捕捉的画面的某一部分为模型的贴图来实现的。首先是shader部分：Shader&amp;quot;Custom/Came...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/weixin_34128501">来自：	<span class="blog_title"> weixin_34128501的博客</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_614","con":",https://blog.csdn.net/qq_15267341/article/details/52129314,BlogCommendFromThirdServiceAll_3"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/qq_15267341/article/details/52129314" target="_blank" title="unity调用摄像头拍照">
+		<h4 class="text-truncate oneline">
+				unity<em>调用</em><em>摄像头</em>拍照		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">08-05</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					8080</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/qq_15267341/article/details/52129314" target="_blank" title="unity调用摄像头拍照">
+				<span class="desc oneline">需要说明的是：手机截图中左边的图为摄像头的画面，即变量goo，右边为屏幕截图，即变量jj摄像头的API和屏幕截图的API没有任何关系，前者只负责把摄像头打开，后者负责屏幕截图2代码作修改，手机截图如下...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/qq_15267341">来自：	<span class="blog_title"> 海涛高软</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	<div class="recommend-item-box recommend-ad-box"><div id="kp_box_59" data-pid="59" data-track-view='{"mod":"kp_popu_59-1190","con":",,"}' data-track-click='{"mod":"kp_popu_59-1190","con":",,"}'><iframe  src="https://kunpeng-sc.csdnimg.cn/#/preview/365?positionId=59&queryWord=" frameborder="0" width= "100%"  height= "60px" scrolling="no" ></iframe></div></div>
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_614","con":",https://blog.csdn.net/avi9111/article/details/77161806,BlogCommendFromThirdServiceAll_4"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/avi9111/article/details/77161806" target="_blank" title="真Unity3d_到底要怎么开始学">
+		<h4 class="text-truncate oneline">
+				真Unity3d_到底要怎么开始学		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">08-14</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					1万+</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/avi9111/article/details/77161806" target="_blank" title="真Unity3d_到底要怎么开始学">
+				<span class="desc oneline">真心不想吐槽什么。但是你看到下面的代码你能看出什么吗？/**	*path：读取文件的路径	*name：读取文件的名称	*/	ArrayListLoadFile(stringpath,stringnam...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/avi9111">来自：	<span class="blog_title"> 大话程序员</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+	<div class="recommend-item-box  recommend-download-box clearfix"  data-track-click='{"mod":"popu_614","con":",https://download.csdn.net/download/alexyuanlei/9989938,BlogCommendFromBaidu_5"}'>
+		<a href="https://download.csdn.net/download/alexyuanlei/9989938" target="_blank">
+			<div class="content clearfix">
+				<div class="">
+					<h4 class="text-truncate oneline clearfix">
+						Unity3d 3.5 <em>WebCamTexture</em> 简单例子					</h4>
+					<span class="data float-right">09-22</span>
+				</div>
+				<div class="desc oneline">
+						自己看，很简单，但不懂就写不出来，懂了觉得超弱B，助你一B之力，随时随地打leader的脸，哈哈哈哈哈哈哈哈				</div>
+				<span class="type-show type-show-download">下载</span>
+			</div>
+		</a>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_614","con":",https://blog.csdn.net/gaojinjingg/article/details/50865571,BlogCommendFromBaidu_6"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/gaojinjingg/article/details/50865571" target="_blank" title="WebCamTexture">
+		<h4 class="text-truncate oneline">
+				<em>WebCamTexture</em>		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">03-12</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					1206</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/gaojinjingg/article/details/50865571" target="_blank" title="WebCamTexture">
+				<span class="desc oneline">Getthisinfothrough unityScript。DescriptionWebCamTexturesaretexturesontowhichthelivevideoinputisrende...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/gaojinjingg">来自：	<span class="blog_title"> gaojinjingg的专栏</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+	<div class="recommend-item-box  recommend-download-box clearfix"  data-track-click='{"mod":"popu_614","con":",https://download.csdn.net/download/anyuanlzh/9295255,BlogCommendFromBaidu_7"}'>
+		<a href="https://download.csdn.net/download/anyuanlzh/9295255" target="_blank">
+			<div class="content clearfix">
+				<div class="">
+					<h4 class="text-truncate oneline clearfix">
+						U3D之<em>WebCamTexture</em>实现前后相机的拍照功能					</h4>
+					<span class="data float-right">11-24</span>
+				</div>
+				<div class="desc oneline">
+						配套博文：http://blog.csdn.net/AnYuanLzh/article/details/50009963				</div>
+				<span class="type-show type-show-download">下载</span>
+			</div>
+		</a>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_614","con":",https://blog.csdn.net/m0_37283423/article/details/70808606,BlogCommendFromBaidu_8"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/m0_37283423/article/details/70808606" target="_blank" title="Unity3D调用摄像头，画面为翻转的问题">
+		<h4 class="text-truncate oneline">
+				Unity3D<em>调用</em><em>摄像头</em>，画面为翻转的问题		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">04-26</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					2619</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/m0_37283423/article/details/70808606" target="_blank" title="Unity3D调用摄像头，画面为翻转的问题">
+				<span class="desc oneline">Unity3D中新建一个工程，加一个Plane，新建一个C#脚本，调用摄像头，不过显示的图片居然是翻转的，也就是头朝地下。调了半天，原来是Plane反掉了，Plane的RotationX值改为90，Y...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/m0_37283423">来自：	<span class="blog_title"> Unity</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	<div class="recommend-item-box recommend-ad-box"><div id="kp_box_60" data-pid="60" data-track-view='{"mod":"kp_popu_60-43","con":",,"}' data-track-click='{"mod":"kp_popu_60-43","con":",,"}'><div id="three_ad8" class="mediav_ad" ></div>
+<script type="text/javascript" src="//static.mediav.com/js/mvf_news_feed.js"></script>
+<script>
+                                               NEWS_FEED({
+                w: 900,
+                h : 84,
+                showid : 'Afihld',
+                placeholderId: "three_ad8",
+                inject : 'define',
+                define : {
+                    imagePosition : 'left',
+                    imageBorderRadius : 3,
+                    imageWidth: 90,
+                    imageHeight: 60,
+                    imageFill : 'clip',
+                    displayImage : true,
+                    displayTitle : true,
+                    titleFontSize: 18,
+                    titleFontColor: '#000',
+                    titleFontFamily : 'Lato,-apple-system,SF UI Text,Arial,PingFang SC,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif',
+                    titleFontWeight: 'bold',
+                    titlePaddingTop : 0,
+                    titlePaddingRight : 0,
+                    titlePaddingBottom : 5,
+                    titlePaddingLeft : 16,
+                    displayDesc : true,
+                    descFontSize: 14,
+                    descFontColor: '#8e959a',
+                    descFontFamily : 'Microsoft Yahei',
+                    paddingTop : 10,
+                    paddingRight : 0,
+                    paddingBottom : 0,
+                    paddingLeft : 0,
+                    backgroundColor: '#fff',
+                    hoverColor: '#000'
+                      }
+                  })
+                                        </script></div></div>
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_614","con":",https://blog.csdn.net/weixin_33688840/article/details/87125818,BlogCommendESEnWordWeight_9"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/weixin_33688840/article/details/87125818" target="_blank" title="调用摄像头来获取帧数据">
+		<h4 class="text-truncate oneline">
+				<em>调用</em><em>摄像头</em>来获取帧数据		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">05-26</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					77</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/weixin_33688840/article/details/87125818" target="_blank" title="调用摄像头来获取帧数据">
+				<span class="desc oneline">为了完成实时的捕获，首先初始化一个AVCaputureSession对象用于创建一个捕获会话（session），我们可以使用AVCaptureSession对象将AV输入设备的数据流以另一种形式转换到...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/weixin_33688840">来自：	<span class="blog_title"> weixin_33688840的博客</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+	<div class="recommend-item-box  recommend-download-box clearfix"  data-track-click='{"mod":"popu_614","con":",https://download.csdn.net/download/u010306617/5260292,BlogCommendESEnWordWeight_10"}'>
+		<a href="https://download.csdn.net/download/u010306617/5260292" target="_blank">
+			<div class="content clearfix">
+				<div class="">
+					<h4 class="text-truncate oneline clearfix">
+						Unity3D<em>调用</em><em>摄像头</em>加载到场景中-插件					</h4>
+					<span class="data float-right">04-15</span>
+				</div>
+				<div class="desc oneline">
+						Unity3D调用摄像头加载到场景中代码				</div>
+				<span class="type-show type-show-download">下载</span>
+			</div>
+		</a>
+	</div>
+
+	
+			<div class="recommend-item-box blog-expert-recommend-box">
+			<div class="d-flex">
+				<div class="blog-expert-recommend">
+					<div class="blog-expert">
+						<div class="blog-expert-flexbox"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_614","con":",https://blog.csdn.net/u010133610/article/details/51407256,BlogCommendFromBaidu_11"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/u010133610/article/details/51407256" target="_blank" title="unity 调用安卓系统摄像机和相册并对图片进行裁剪(一)">
+		<h4 class="text-truncate oneline">
+				unity <em>调用</em>安卓系统摄像机和相册并对图片进行裁剪(一)		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">05-14</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					4327</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/u010133610/article/details/51407256" target="_blank" title="unity 调用安卓系统摄像机和相册并对图片进行裁剪(一)">
+				<span class="desc oneline">这是本人从事这个行业以来的第一篇技术博客，一直以来，都是需要什么直接从网上找现成的。但是最近遇到的问题，使我感慨颇多，需求如标题所言，从网上找出来的基本都是雨凇momo的，其他也都是做的微调。但是在做...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/u010133610">来自：	<span class="blog_title"> Hello Mingo</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_614","con":",https://blog.csdn.net/Cocoa_China/article/details/10527995,BlogCommendFromBaidu_12"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/Cocoa_China/article/details/10527995" target="_blank" title="Unity调用外接摄像头的实例代码(C#)">
+		<h4 class="text-truncate oneline">
+				Unity<em>调用</em>外接<em>摄像头</em>的实例代码(C#)		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">08-29</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					1万+</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/Cocoa_China/article/details/10527995" target="_blank" title="Unity调用外接摄像头的实例代码(C#)">
+				<span class="desc oneline">usingUnityEngine;usingSystem.Collections;usingSystem.Threading;publicclassBtnControl:MonoBehaviour{	...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/Cocoa_China">来自：	<span class="blog_title"> Cocoa_China的专栏</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_614","con":",https://blog.csdn.net/qq_34550847/article/details/54091668,BlogCommendFromBaidu_13"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/qq_34550847/article/details/54091668" target="_blank" title="unity3d，跟着大佬做自己的第一个游戏（第一步，游戏模型制作）">
+		<h4 class="text-truncate oneline">
+				unity3d，跟着大佬做自己的第一个游戏（第一步，游戏模型制作）		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">01-05</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					8754</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/qq_34550847/article/details/54091668" target="_blank" title="unity3d，跟着大佬做自己的第一个游戏（第一步，游戏模型制作）">
+				<span class="desc oneline">开始做自己的第一个游戏了！</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/qq_34550847">来自：	<span class="blog_title"> 油油的博客</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	<div class="recommend-item-box recommend-ad-box"><div id="kp_box_61" data-pid="61" data-track-view='{"mod":"kp_popu_61-557","con":",,"}' data-track-click='{"mod":"kp_popu_61-557","con":",,"}'><div id="three_ad13" class="mediav_ad" ></div>
+<script type="text/javascript" src="//static.mediav.com/js/mvf_news_feed.js"></script>
+<script>
+                                               NEWS_FEED({
+                w: 852,
+                h : 60,
+                showid : 'GNKXx7',
+                placeholderId: "three_ad13",
+                inject : 'define',
+                define : {
+                    imagePosition : 'left',
+                    imageBorderRadius : 3,
+                    imageWidth: 90,
+                    imageHeight: 60,
+                    imageFill : 'clip',
+                    displayImage : true,
+                    displayTitle : true,
+                    titleFontSize: 18,
+                    titleFontColor: '#000',
+                    titleFontFamily : 'Lato,-apple-system,SF UI Text,Arial,PingFang SC,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif',
+                    titleFontWeight: 'bold',
+                    titlePaddingTop : 0,
+                    titlePaddingRight : 0,
+                    titlePaddingBottom : 5,
+                    titlePaddingLeft : 16,
+                    displayDesc : true,
+                    descFontSize: 14,
+                    descFontColor: '#8e959a',
+                    descFontFamily : 'Microsoft Yahei',
+                    paddingTop : 0,
+                    paddingRight : 0,
+                    paddingBottom : 0,
+                    paddingLeft : 0,
+                    backgroundColor: '#fff',
+                    hoverColor: '#000'
+                      }
+                  })
+                                        </script></div></div>
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_614","con":",https://blog.csdn.net/qq_38643064/article/details/80629916,BlogCommendFromBaidu_14"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/qq_38643064/article/details/80629916" target="_blank" title="【unity3d】unity3d第一个项目">
+		<h4 class="text-truncate oneline">
+				【unity3d】unity3d第一个项目		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">06-09</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					2212</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/qq_38643064/article/details/80629916" target="_blank" title="【unity3d】unity3d第一个项目">
+				<span class="desc oneline"> 打开unity3d之后，进入如下场景点击new之后新建一个项目，如果是要打开原来已经存在的文件，则应该点击open第一个是输入projectname，也就是项目名称，locaton也就是项目保存的路...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/qq_38643064">来自：	<span class="blog_title"> qq_38643064的博客</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_614","con":",https://blog.csdn.net/moonlightpeng/article/details/80034401,BlogCommendFromBaidu_15"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/moonlightpeng/article/details/80034401" target="_blank" title="unity 打开摄像头（图像倒立的变换） 和显示所有摄像头的名称">
+		<h4 class="text-truncate oneline">
+				unity 打开<em>摄像头</em>（图像倒立的变换） 和显示所有<em>摄像头</em>的名称		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">04-21</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					865</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/moonlightpeng/article/details/80034401" target="_blank" title="unity 打开摄像头（图像倒立的变换） 和显示所有摄像头的名称">
+				<span class="desc oneline">usingUnityEngine;usingSystem.Collections;publicclassDetectDeviceList:MonoBehaviour{	//Usethisforinit...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/moonlightpeng">来自：	<span class="blog_title"> moonlightpeng的博客</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_614","con":",https://blog.csdn.net/lichaoder/article/details/53425566,BlogCommendFromThirdServiceAll_16"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/lichaoder/article/details/53425566" target="_blank" title="Unity使用WebCamTexture 实现手机前后摄像头调用">
+		<h4 class="text-truncate oneline">
+				Unity使用<em>WebCamTexture</em> 实现手机前后<em>摄像头</em><em>调用</em>		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">12-01</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					7105</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/lichaoder/article/details/53425566" target="_blank" title="Unity使用WebCamTexture 实现手机前后摄像头调用">
+				<span class="desc oneline">unity外部摄像头（WebCamTexture）调用备忘录。</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/lichaoder">来自：	<span class="blog_title"> 失忆牧羊的博客</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_614","con":",https://blog.csdn.net/weixin_34255793/article/details/87551080,BlogCommendFromThirdServiceAll_17"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/weixin_34255793/article/details/87551080" target="_blank" title="Unity开发-添加WebCamTexture，并设置位置">
+		<h4 class="text-truncate oneline">
+				Unity开发-添加<em>WebCamTexture</em>，并设置位置		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">03-14</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					72</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/weixin_34255793/article/details/87551080" target="_blank" title="Unity开发-添加WebCamTexture，并设置位置">
+				<span class="desc oneline">WebCamTexture是显示摄像头的贴图，可以用在3D物体中，也可以在UI界面中。3D物体拖一个Plane到场景中,命名为Plane然后新建一个material，并设置shader类型为Unlit...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/weixin_34255793">来自：	<span class="blog_title"> weixin_34255793的博客</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_614","con":",https://blog.csdn.net/wwrm111/article/details/80565535,BlogCommendFromThirdServiceAll_18"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/wwrm111/article/details/80565535" target="_blank" title="unity  利用WebCamTexture实现开启摄像头_解决发布到安卓后反转问题。">
+		<h4 class="text-truncate oneline">
+				unity  利用<em>WebCamTexture</em>实现开启<em>摄像头</em>_解决发布到安卓后反转问题。		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">06-04</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					1416</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/wwrm111/article/details/80565535" target="_blank" title="unity  利用WebCamTexture实现开启摄像头_解决发布到安卓后反转问题。">
+				<span class="desc oneline">usingSystem.Collections;usingSystem.Collections.Generic;usingUnityEngine;usingUnityEngine.UI;//挂载到Ra...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/wwrm111">来自：	<span class="blog_title"> 。。。</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	<div class="recommend-item-box recommend-ad-box"><div id="kp_box_62" data-pid="62" data-track-view='{"mod":"kp_popu_62-556","con":",,"}' data-track-click='{"mod":"kp_popu_62-556","con":",,"}'><div id="three_ad18" class="mediav_ad" ></div>
+<script type="text/javascript" src="//static.mediav.com/js/mvf_news_feed.js"></script>
+<script>
+                                               NEWS_FEED({
+                w: 852,
+                h : 60,
+                showid : 'Afihld',
+                placeholderId: "three_ad18",
+                inject : 'define',
+                define : {
+                    imagePosition : 'left',
+                    imageBorderRadius : 3,
+                    imageWidth: 90,
+                    imageHeight: 60,
+                    imageFill : 'clip',
+                    displayImage : true,
+                    displayTitle : true,
+                    titleFontSize: 18,
+                    titleFontColor: '#000',
+                    titleFontFamily : 'Lato,-apple-system,SF UI Text,Arial,PingFang SC,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif',
+                    titleFontWeight: 'bold',
+                    titlePaddingTop : 0,
+                    titlePaddingRight : 0,
+                    titlePaddingBottom : 5,
+                    titlePaddingLeft : 16,
+                    displayDesc : true,
+                    descFontSize: 14,
+                    descFontColor: '#8e959a',
+                    descFontFamily : 'Microsoft Yahei',
+                    paddingTop : 0,
+                    paddingRight : 0,
+                    paddingBottom : 0,
+                    paddingLeft : 0,
+                    backgroundColor: '#fff',
+                    hoverColor: '#000'
+                      }
+                  })
+                                        </script></div></div>
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_614","con":",https://blog.csdn.net/Neil3D/article/details/38534809,BlogCommendFromThirdServiceAll_19"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/Neil3D/article/details/38534809" target="_blank" title="使用Unity3D的50个技巧：Unity3D最佳实践">
+		<h4 class="text-truncate oneline">
+				使用Unity3D的50个技巧：Unity3D最佳实践		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">08-31</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					4万+</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/Neil3D/article/details/38534809" target="_blank" title="使用Unity3D的50个技巧：Unity3D最佳实践">
+				<span class="desc oneline">关于使用Unity3D的50条最佳实践。</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/Neil3D">来自：	<span class="blog_title"> 燕良的博客</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_614","con":",https://blog.csdn.net/wuyt2008/article/details/50684236,BlogCommendFromThirdServiceAll_20"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/wuyt2008/article/details/50684236" target="_blank" title="Unity3d，调用摄像头显示">
+		<h4 class="text-truncate oneline">
+				Unity3d，<em>调用</em><em>摄像头</em>显示		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">02-18</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					1万+</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/wuyt2008/article/details/50684236" target="_blank" title="Unity3d，调用摄像头显示">
+				<span class="desc oneline">先上代码usingUnityEngine;usingSystem.Collections;publicclassWebCamManager:MonoBehaviour{	//Usethisforini...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/wuyt2008">来自：	<span class="blog_title"> wuyt2008的专栏</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box  recommend-other-item-box"  data-track-click='{"mod":"popu_614","con":",https://bbs.csdn.net/topics/392514551,BlogCommendFromBaidu_21"}'>
+	<a href="https://bbs.csdn.net/topics/392514551" target="_blank">
+		<h4 class="text-truncate oneline">
+				rawImage通过openCvforunity 获取texture2d 生成到图片上显示不了		</h4>
+		<div class="info-box d-flex align-content-center">
+				<span class="date">01-30</span>
+		</div>
+		<p class="content oneline">
+			<span class="desc oneline">有没大佬遇过texture2d public出去的图像已经有画面了 把rawImage.texture = 这个texture2d后 rawImage一直没画面 另外 t2d那个就是我public出来</span>
+							<span class="type-show type-show-bbs">论坛</span>
+					</p>
+	</a>
+
+</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_614","con":",https://blog.csdn.net/newbieol/article/details/50756321,BlogCommendFromBaidu_22"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/newbieol/article/details/50756321" target="_blank" title="菜鸟在线Unity3d教程：如何获取摄像机图像？">
+		<h4 class="text-truncate oneline">
+				菜鸟在线Unity3d教程：如何获取摄像机图像？		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">02-27</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					2360</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/newbieol/article/details/50756321" target="_blank" title="菜鸟在线Unity3d教程：如何获取摄像机图像？">
+				<span class="desc oneline">本文介绍了两种在Unity中获得相机图像的方法：1.使用image类；2.使用图像作为OpenGL的纹理。更多相关内容请继续关注菜鸟在线官网，还有Unity3d游戏开发教程观看！...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/newbieol">来自：	<span class="blog_title"> newbieol的博客</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_614","con":",https://blog.csdn.net/a117653909/article/details/39936419,BlogCommendFromBaidu_23"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/a117653909/article/details/39936419" target="_blank" title="Unity3D调用摄像头时的最高分辨率">
+		<h4 class="text-truncate oneline">
+				Unity3D<em>调用</em><em>摄像头</em>时的最高分辨率		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">10-09</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					7710</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/a117653909/article/details/39936419" target="_blank" title="Unity3D调用摄像头时的最高分辨率">
+				<span class="desc oneline">怎样知道一款网络摄像头支持的最高分辨率呢？</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/a117653909">来自：	<span class="blog_title"> 只有偏执狂才能生存</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	<div class="recommend-item-box recommend-ad-box"><div id="kp_box_63" data-pid="63" data-track-view='{"mod":"kp_popu_63-1059","con":",,"}' data-track-click='{"mod":"kp_popu_63-1059","con":",,"}'><iframe  src="https://kunpeng-sc.csdnimg.cn/#/preview/234?positionId=63&queryWord=" frameborder="0" width= "100%"  height= "75px" scrolling="no" ></iframe></div></div>
+	
+	<div class="recommend-item-box  recommend-download-box clearfix"  data-track-click='{"mod":"popu_614","con":",https://download.csdn.net/download/qq_16929759/10421612,BlogCommendFromBaidu_24"}'>
+		<a href="https://download.csdn.net/download/qq_16929759/10421612" target="_blank">
+			<div class="content clearfix">
+				<div class="">
+					<h4 class="text-truncate oneline clearfix">
+						unityOpenWebCam					</h4>
+					<span class="data float-right">05-17</span>
+				</div>
+				<div class="desc oneline">
+						使用unity打开移动端摄像头，自适应分辨率显示并区分平台。文章链接：https://blog.csdn.net/qq_16929759/article/details/80355510				</div>
+				<span class="type-show type-show-download">下载</span>
+			</div>
+		</a>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_614","con":",https://blog.csdn.net/SDDCCCC/article/details/18948641,BlogCommendFromBaidu_25"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/SDDCCCC/article/details/18948641" target="_blank" title="unity3d笔记（5）——调用Webcam设备">
+		<h4 class="text-truncate oneline">
+				unity3d笔记（5）——<em>调用</em>Webcam设备		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">02-06</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					2996</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/SDDCCCC/article/details/18948641" target="_blank" title="unity3d笔记（5）——调用Webcam设备">
+				<span class="desc oneline">调用WebCam设备，只需将脚本绑定到带有Render组件的物体上，简单的调用webCam的代码如下：usingUnityEngine;usingSystem.Collections;publiccl...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/SDDCCCC">来自：	<span class="blog_title"> 技术分享</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_614","con":",https://blog.csdn.net/qq_38962400/article/details/79613102,BlogCommendFromBaidu_26"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/qq_38962400/article/details/79613102" target="_blank" title="Unity调用USB摄像头开启与关闭">
+		<h4 class="text-truncate oneline">
+				Unity<em>调用</em>USB<em>摄像头</em>开启与关闭		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">03-19</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					1552</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/qq_38962400/article/details/79613102" target="_blank" title="Unity调用USB摄像头开启与关闭">
+				<span class="desc oneline">usingUnityEngine;publicclassWebCamera:MonoBehaviour{[Tooltip(&amp;quot;返回的照片数据,根据返回的照片,进行照片的识别和比对认证等等!&amp;q...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/qq_38962400">来自：	<span class="blog_title"> 杨小哥的博客</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_614","con":",https://blog.csdn.net/Superficialtise/article/details/66968134,BlogCommendFromBaidu_27"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/Superficialtise/article/details/66968134" target="_blank" title="Unity如何调用安卓手机摄像头实现拍照和录像">
+		<h4 class="text-truncate oneline">
+				Unity如何<em>调用</em>安卓手机<em>摄像头</em>实现拍照和录像		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">03-27</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					7423</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/Superficialtise/article/details/66968134" target="_blank" title="Unity如何调用安卓手机摄像头实现拍照和录像">
+				<span class="desc oneline">1，要想调用摄像头首先要打开摄像头驱动，如果用户允许则可以使用。2，定义WebCamTexture的变量用于捕获单张照片。3，连续捕获须启用线程。实现代码：usingUnityEngine;using...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/Superficialtise">来自：	<span class="blog_title"> 充分准备是对自己的认可！</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_614","con":",https://blog.csdn.net/qq_29579137/article/details/77369734,BlogCommendFromBaidu_28"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/qq_29579137/article/details/77369734" target="_blank" title="Unity网格编程篇(二) 非常详细的Mesh编程入门文章">
+		<h4 class="text-truncate oneline">
+				Unity网格编程篇(二) 非常详细的Mesh编程入门文章		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">08-18</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					1万+</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/qq_29579137/article/details/77369734" target="_blank" title="Unity网格编程篇(二) 非常详细的Mesh编程入门文章">
+				<span class="desc oneline">ProceduralGridProgrammingForm代码实现网格本文目标创建网格坐标使用协程计算他们的位置利用三角形确定一个面自动生成法线添加纹理坐标和切线在这篇教程中我们将利用顶点和三角面创建...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/qq_29579137">来自：	<span class="blog_title"> SpringD</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	<div class="recommend-item-box recommend-ad-box"><div id="kp_box_64" data-pid="64" data-track-view='{"mod":"kp_popu_64-1251","con":",,"}' data-track-click='{"mod":"kp_popu_64-1251","con":",,"}'><!-- T28 位置 -->
+<script src="https://nbrecsys.4paradigm.com/resource/cus/csdn/sdk-csdn-render.js"></script>
+<div
+  id="_4paradigm_T28_render"
+  class="_paradigm_T_ads_render _4paradigm_box recommend-item-box clearfix"
+></div>
+<script>
+  //  渲染T28  传入 渲染位置的id和渲染位置的标记
+  p4CSDNRender_T("_4paradigm_T28_render", "T28");
+</script></div></div>
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_614","con":",https://blog.csdn.net/m0_37283423/article/details/70808617,BlogCommendFromBaidu_29"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/m0_37283423/article/details/70808617" target="_blank" title="Unity3D中调用外接摄像头，并保存为图片文件">
+		<h4 class="text-truncate oneline">
+				Unity3D中<em>调用</em>外接<em>摄像头</em>，并保存为图片文件		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">04-26</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					2687</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/m0_37283423/article/details/70808617" target="_blank" title="Unity3D中调用外接摄像头，并保存为图片文件">
+				<span class="desc oneline">项目要求调用摄像头，并且把图像保存下来，上传到服务器。 这里有几个难点，调用摄像头是很简单的，unity已经提供好了接口，我们只需要调用就行。问题就是怎么把图片保存下来。我们来看下代码。[csharp...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/m0_37283423">来自：	<span class="blog_title"> Unity</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_614","con":",https://blog.csdn.net/qq_25601345/article/details/77102775,BlogCommendFromThirdServiceAll_30"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/qq_25601345/article/details/77102775" target="_blank" title="Unity3D常见面试题">
+		<h4 class="text-truncate oneline">
+				Unity3D常见面试题		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">08-11</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					2万+</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/qq_25601345/article/details/77102775" target="_blank" title="Unity3D常见面试题">
+				<span class="desc oneline">Unity3D常见面试题</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/qq_25601345">来自：	<span class="blog_title"> Edward的博客</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_614","con":",https://blog.csdn.net/lei_7103/article/details/80104557,BlogCommendFromThirdServiceAll_31"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/lei_7103/article/details/80104557" target="_blank" title="Unity调用摄像头">
+		<h4 class="text-truncate oneline">
+				Unity<em>调用</em><em>摄像头</em>		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">04-27</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					2693</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/lei_7103/article/details/80104557" target="_blank" title="Unity调用摄像头">
+				<span class="desc oneline">1.在unity的场景中新建一个Quad。2.新建一个Material文件夹用来存放Material，在Material里新建一个Material材质，并命名为CamTexture。3.选中CamTe...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/lei_7103">来自：	<span class="blog_title"> Stone的博客</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_614","con":",https://blog.csdn.net/IT_yanghui/article/details/78615209,BlogCommendFromThirdServiceAll_32"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/IT_yanghui/article/details/78615209" target="_blank" title="unity3d-WebCamTexture类API详解">
+		<h4 class="text-truncate oneline">
+				unity3d-<em>WebCamTexture</em>类API详解		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">11-23</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					1541</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/IT_yanghui/article/details/78615209" target="_blank" title="unity3d-WebCamTexture类API详解">
+				<span class="desc oneline">unity使用相机拍照、扫描等，WebCamTexture类详解</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/IT_yanghui">来自：	<span class="blog_title"> IT_yanghui的博客</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_614","con":",https://blog.csdn.net/qq_21153225/article/details/82085606,BlogCommendFromThirdServiceAll_33"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/qq_21153225/article/details/82085606" target="_blank" title="Unity 调用外部摄像头">
+		<h4 class="text-truncate oneline">
+				Unity <em>调用</em><em>外部</em><em>摄像头</em>		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">08-26</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					296</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/qq_21153225/article/details/82085606" target="_blank" title="Unity 调用外部摄像头">
+				<span class="desc oneline">WebCamTexturewebCam;publicRawImagett;//背景publicImagebackGround;///&amp;amp;lt;summary&amp;amp;gt;///打开摄像机///...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/qq_21153225">来自：	<span class="blog_title"> Deveuper的博客</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	<div class="recommend-item-box recommend-ad-box"><div id="kp_box_65" data-pid="65" data-track-view='{"mod":"kp_popu_65-625","con":",,"}' data-track-click='{"mod":"kp_popu_65-625","con":",,"}'><script type="text/javascript" src="//rabc1.iteye.com/common/openjs/m022.js?hcuzbzy=bi"></script></div></div>
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_614","con":",https://blog.csdn.net/u010707274/article/details/72823114,BlogCommendFromThirdServiceAll_34"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/u010707274/article/details/72823114" target="_blank" title="Unity3D 原生WebCamera实现摄像头显示">
+		<h4 class="text-truncate oneline">
+				Unity3D 原生WebCamera实现<em>摄像头</em>显示		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">05-31</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					1209</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/u010707274/article/details/72823114" target="_blank" title="Unity3D 原生WebCamera实现摄像头显示">
+				<span class="desc oneline">Unity3D原生WebCamera实现摄像头显示  今天小编为大家分享一下，如何通过WebCamera调用外部的摄像头。  1.首先我们需要简单认识一下，unity有关摄像头需要用到的内置类；   ...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/u010707274">来自：	<span class="blog_title"> u010707274的博客</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_614","con":",https://blog.csdn.net/nicepainkiller/article/details/78633206,BlogCommendFromBaidu_35"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/nicepainkiller/article/details/78633206" target="_blank" title="unity WebCam  手机自适应 摄像头">
+		<h4 class="text-truncate oneline">
+				unity WebCam  手机自适应 <em>摄像头</em>		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">11-25</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					700</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/nicepainkiller/article/details/78633206" target="_blank" title="unity WebCam  手机自适应 摄像头">
+				<span class="desc oneline">手机自适应摄像头</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/nicepainkiller">来自：	<span class="blog_title"> nicepainkiller的专栏</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_614","con":",https://blog.csdn.net/AWNUXCVBN/article/details/18621265,BlogCommendFromBaidu_36"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/AWNUXCVBN/article/details/18621265" target="_blank" title="Unity3D调用摄像头显示当前拍摄画面">
+		<h4 class="text-truncate oneline">
+				Unity3D<em>调用</em><em>摄像头</em>显示当前拍摄画面		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">01-21</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					2万+</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/AWNUXCVBN/article/details/18621265" target="_blank" title="Unity3D调用摄像头显示当前拍摄画面">
+				<span class="desc oneline">usingUnityEngine;usingSystem.Collections;publicclassCameraTest:MonoBehaviour{publicWebCamTexturecame...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/AWNUXCVBN">来自：	<span class="blog_title"> 不忘初心  方得始终</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_614","con":",https://blog.csdn.net/qiao2037641855/article/details/84031522,BlogCommendFromBaidu_37"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/qiao2037641855/article/details/84031522" target="_blank" title="Unity调用外部摄像头">
+		<h4 class="text-truncate oneline">
+				Unity<em>调用</em><em>外部</em><em>摄像头</em>		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">11-13</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					77</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/qiao2037641855/article/details/84031522" target="_blank" title="Unity调用外部摄像头">
+				<span class="desc oneline">https://blog.csdn.net/lei_7103/article/details/80104557</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/qiao2037641855">来自：	<span class="blog_title"> 龙胖胖的博客</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_614","con":",https://blog.csdn.net/piplup/article/details/84955986,BlogCommendFromBaidu_38"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/piplup/article/details/84955986" target="_blank" title="unity使用外部的摄像头">
+		<h4 class="text-truncate oneline">
+				unity使用<em>外部</em>的<em>摄像头</em>		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">12-11</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					393</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/piplup/article/details/84955986" target="_blank" title="unity使用外部的摄像头">
+				<span class="desc oneline">1.WebCamTexture  首先了解下WebCamTexture这个类，通过调用个这个类可以获取到可以使用的摄像头。通过使用该方法我们可以获取他返回的设备名2.RequestUserAuthor...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/piplup">来自：	<span class="blog_title"> piplup的博客</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	<div class="recommend-item-box recommend-ad-box"><div id="kp_box_66" data-pid="66" data-track-view='{"mod":"kp_popu_66-881","con":",,"}' data-track-click='{"mod":"kp_popu_66-881","con":",,"}'><script src="https://nbrecsys.4paradigm.com/resource/cus/csdn/sdk-csdn-render.js"></script>
+<div
+  id="_4paradigm_T38_render"
+  class="_paradigm_T_ads_render _4paradigm_box recommend-item-box clearfix"
+></div>
+<script>
+  //  渲染T38  传入 渲染位置的id和渲染位置的标记
+  p4CSDNRender_T("_4paradigm_T38_render", "T38");
+</script></div></div>
+	
+	<div class="recommend-item-box  recommend-download-box clearfix"  data-track-click='{"mod":"popu_614","con":",https://download.csdn.net/download/peri0898/4380930,BlogCommendFromBaidu_39"}'>
+		<a href="https://download.csdn.net/download/peri0898/4380930" target="_blank">
+			<div class="content clearfix">
+				<div class="">
+					<h4 class="text-truncate oneline clearfix">
+						unity3d 连接外置<em>摄像头</em>					</h4>
+					<span class="data float-right">06-19</span>
+				</div>
+				<div class="desc oneline">
+						步骤： 新建场景，新建一个cube或者plane之类的有renderer的物体，然后新建C#脚本Test，拖上去，运行即可				</div>
+				<span class="type-show type-show-download">下载</span>
+			</div>
+		</a>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_614","con":",https://blog.csdn.net/u010930289/article/details/55814101,BlogCommendFromBaidu_40"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/u010930289/article/details/55814101" target="_blank" title="Unity3D 官方教程：WebGL（一）">
+		<h4 class="text-truncate oneline">
+				Unity3D 官方教程：WebGL（一）		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">02-23</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					3万+</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/u010930289/article/details/55814101" target="_blank" title="Unity3D 官方教程：WebGL（一）">
+				<span class="desc oneline">Unity3D官方教程：WebGL什么是UnityWebGL?创建一个UnityWebGL项目</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/u010930289">来自：	<span class="blog_title"> 路见不平先甩锅 </span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_614","con":",https://blog.csdn.net/huchong0/article/details/73468690,BlogCommendFromBaidu_41"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/huchong0/article/details/73468690" target="_blank" title="【个人作品】 Unity3D项目 SpaceShooter">
+		<h4 class="text-truncate oneline">
+				【个人作品】 Unity3D项目 SpaceShooter		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">06-19</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					1559</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/huchong0/article/details/73468690" target="_blank" title="【个人作品】 Unity3D项目 SpaceShooter">
+				<span class="desc oneline">本项目是在Unity3D官方教学项SpaceShooter上的扩展游戏整体上借鉴模仿了以前街机射击游戏【彩京打击者】【雷电】以及【东方】系列的弹幕射击游戏素材皆来自于网络上的免费素材，比如模型、音效、...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/huchong0">来自：	<span class="blog_title"> huchong0的博客</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_614","con":",https://blog.csdn.net/zhenghongzhi6/article/details/79272914,BlogCommendFromBaidu_42"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/zhenghongzhi6/article/details/79272914" target="_blank" title="[视频教程]用Unity3d开发跳一跳小游戏">
+		<h4 class="text-truncate oneline">
+				[视频教程]用Unity3d开发跳一跳小游戏		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">02-06</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					4383</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/zhenghongzhi6/article/details/79272914" target="_blank" title="[视频教程]用Unity3d开发跳一跳小游戏">
+				<span class="desc oneline">本文首发于“洪流学堂”微信公众号。洪流学堂，让你快人几步成为Unity大牛！开发成果包含的知识点编辑器基本用法及操作简单的C#编程刚体Rigidbody组件动态生成物体DoTween插件粒子系统UGU...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/zhenghongzhi6">来自：	<span class="blog_title"> 关尔Manic的技术园</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_614","con":",https://blog.csdn.net/a770150657/article/details/52587387,BlogCommendFromBaidu_43"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/a770150657/article/details/52587387" target="_blank" title="Unity3D打开摄像头并且调节分辨率">
+		<h4 class="text-truncate oneline">
+				Unity3D打开<em>摄像头</em>并且调节分辨率		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">09-19</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					3686</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/a770150657/article/details/52587387" target="_blank" title="Unity3D打开摄像头并且调节分辨率">
+				<span class="desc oneline">usingUnityEngine;usingSystem.Collections;publicclassWebCamManager:MonoBehaviour{  privatestringdevic...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/a770150657">来自：	<span class="blog_title"> a770150657的博客</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	<div class="recommend-item-box recommend-ad-box"><div id="kp_box_67" data-pid="67" data-track-view='{"mod":"kp_popu_67-882","con":",,"}' data-track-click='{"mod":"kp_popu_67-882","con":",,"}'><script src="https://nbrecsys.4paradigm.com/resource/cus/csdn/sdk-csdn-render.js"></script>
+<div
+  id="_4paradigm_T43_render"
+  class="_paradigm_T_ads_render _4paradigm_box recommend-item-box clearfix"
+></div>
+<script>
+  //  渲染T43  传入 渲染位置的id和渲染位置的标记
+  p4CSDNRender_T("_4paradigm_T43_render", "T43");
+</script></div></div>
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_614","con":",https://blog.csdn.net/qq_31850729/article/details/52884670,BlogCommendFromBaidu_44"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/qq_31850729/article/details/52884670" target="_blank" title="unity ugui 伤害飘血">
+		<h4 class="text-truncate oneline">
+				unity ugui 伤害飘血		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">04-10</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					3846</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/qq_31850729/article/details/52884670" target="_blank" title="unity ugui 伤害飘血">
+				<span class="desc oneline">publicvirtualvoidOnUpdate(){if(_thissprite.goRoot.hudTrm==null)return;this._startWorldPos=_thissprit...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/qq_31850729">来自：	<span class="blog_title"> 别和我说话</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_614","con":",https://blog.csdn.net/qq_15267341/article/details/52462228,BlogCommendFromThirdServiceAll_45"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/qq_15267341/article/details/52462228" target="_blank" title="WebCamTexture摄像头画面颠倒的问题">
+		<h4 class="text-truncate oneline">
+				<em>WebCamTexture</em><em>摄像头</em>画面颠倒的问题		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">09-07</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					2632</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/qq_15267341/article/details/52462228" target="_blank" title="WebCamTexture摄像头画面颠倒的问题">
+				<span class="desc oneline">之前我用的是横屏的，那么我打开摄像头，并将摄像头内容呈现在UI上，用下面的代码显示正常应项目的需要，开发的app变成竖屏显示，我依然使用上面截图中代码，发现摄像头的画面总是平躺着，并且还大量变形，我必...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/qq_15267341">来自：	<span class="blog_title"> 海涛高软</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_614","con":",https://blog.csdn.net/AnYuanLzh/article/details/49534223,BlogCommendFromThirdServiceAll_46"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/AnYuanLzh/article/details/49534223" target="_blank" title="u3d的摄像头：WebCamTexture">
+		<h4 class="text-truncate oneline">
+				u3d的<em>摄像头</em>：<em>WebCamTexture</em>		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">10-31</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					1746</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/AnYuanLzh/article/details/49534223" target="_blank" title="u3d的摄像头：WebCamTexture">
+				<span class="desc oneline">OpenCamera的调用不要放在Awake中voidStart(){StartCoroutine(OpenCamera());}	IEnumeratorOpenCamera(){yieldretur...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/AnYuanLzh">来自：	<span class="blog_title"> AnYuanLzh</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_614","con":",https://blog.csdn.net/a117653909/article/details/52097273,BlogCommendFromBaidu_47"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/a117653909/article/details/52097273" target="_blank" title="Unity3D调用iOS摄像头全屏旋转，ZXing测试">
+		<h4 class="text-truncate oneline">
+				Unity3D<em>调用</em>iOS<em>摄像头</em>全屏旋转，ZXing测试		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">08-02</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					2073</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/a117653909/article/details/52097273" target="_blank" title="Unity3D调用iOS摄像头全屏旋转，ZXing测试">
+				<span class="desc oneline">在测试Unity3DZXing代码时，调用iOS摄像头的效果总不令我满意，你会发现用WebCamTexture调用的摄像头画面跟iOS自带相册调用的效果不一样，焦距有点问题。虽然这不影响ZXing的调...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/a117653909">来自：	<span class="blog_title"> 只有偏执狂才能生存</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_614","con":",https://blog.csdn.net/u010133610/article/details/51533434,BlogCommendFromBaidu_48"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/u010133610/article/details/51533434" target="_blank" title="Unity与IOS交互，调用IOS系统相机和相册">
+		<h4 class="text-truncate oneline">
+				Unity与IOS交互，<em>调用</em>IOS系统相机和相册		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">05-29</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					1万+</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/u010133610/article/details/51533434" target="_blank" title="Unity与IOS交互，调用IOS系统相机和相册">
+				<span class="desc oneline">与IOS的交互，在步骤上要比android简单许多，不会产生因为系统版本，或者包名导致的许多问题。过程中最头疼的一个问题是IOS回调Unity，很简单的一个问题，搞了半天。...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/u010133610">来自：	<span class="blog_title"> Hello Mingo</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	<div class="recommend-item-box recommend-ad-box"><div id="kp_box_68" data-pid="68" data-track-view='{"mod":"kp_popu_68-883","con":",,"}' data-track-click='{"mod":"kp_popu_68-883","con":",,"}'><!-- T48 位置 -->
+<script src="https://nbrecsys.4paradigm.com/resource/cus/csdn/sdk-csdn-render.js"></script>
+<div
+  id="_4paradigm_T48_render"
+  class="_paradigm_T_ads_render _4paradigm_box recommend-item-box clearfix"
+></div>
+<script>
+  //  渲染T48  传入 渲染位置的id和渲染位置的标记
+  p4CSDNRender_T("_4paradigm_T48_render", "T48");
+</script></div></div>
+	
+	<div class="recommend-item-box  recommend-download-box clearfix"  data-track-click='{"mod":"popu_614","con":",https://download.csdn.net/download/weixin_42930580/10645358,BlogCommendFromBaidu_49"}'>
+		<a href="https://download.csdn.net/download/weixin_42930580/10645358" target="_blank">
+			<div class="content clearfix">
+				<div class="">
+					<h4 class="text-truncate oneline clearfix">
+						unity使用webcam<em>调用</em>移动端<em>摄像头</em>适配安卓和ios 源码和安卓apk					</h4>
+					<span class="data float-right">09-04</span>
+				</div>
+				<div class="desc oneline">
+						unity使用webcam调用移动端摄像头适配安卓和ios 源码和安卓apk				</div>
+				<span class="type-show type-show-download">下载</span>
+			</div>
+		</a>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_614","con":",https://blog.csdn.net/VBcom/article/details/7245186,BlogCommendHotData_0"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/VBcom/article/details/7245186" target="_blank" title="DirectX修复工具增强版">
+		<h4 class="text-truncate oneline">
+				DirectX修复工具增强版		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">02-09</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					206万+</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/VBcom/article/details/7245186" target="_blank" title="DirectX修复工具增强版">
+				<span class="desc oneline">最后更新：2019-5-26
+
+DirectX修复工具最新版：DirectX Repair V3.8 增强版NEW!
+
+版本号：V3.8.0.11638
+
+大小: 107MB/7z格式压缩，189MB...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/VBcom">来自：	<span class="blog_title"> VBcom的专栏</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_614","con":",https://blog.csdn.net/themagickeyjianan/article/details/52386981,BlogCommendHotData_1"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/themagickeyjianan/article/details/52386981" target="_blank" title="python图片处理类之~PIL.Image模块(ios android icon图标自动生成处理)">
+		<h4 class="text-truncate oneline">
+				python图片处理类之~PIL.Image模块(ios android icon图标自动生成处理)		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">08-31</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					11万+</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/themagickeyjianan/article/details/52386981" target="_blank" title="python图片处理类之~PIL.Image模块(ios android icon图标自动生成处理)">
+				<span class="desc oneline">1.从pyCharm提示下载PIL包
+
+ http://www.pythonware.com/products/pil/
+
+ 
+
+2.解压后，进入到目录下
+
+
+cd /Users/jianan/Dow...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/themagickeyjianan">来自：	<span class="blog_title"> 专注于cocos+unity+服务器全栈</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_614","con":",https://blog.csdn.net/sfeng95/article/details/62239539,BlogCommendHotData_2"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/sfeng95/article/details/62239539" target="_blank" title="centos7 开启网络连接">
+		<h4 class="text-truncate oneline">
+				centos7 开启网络连接		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">03-15</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					3万+</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/sfeng95/article/details/62239539" target="_blank" title="centos7 开启网络连接">
+				<span class="desc oneline">1.当我们发现无法联网时，我们运行下面命令或者ping命令
+ip  addr
+
+结果没有显示局域网的IP地址
+2.我们去修改网卡配置文件，把网络连接打开
+cd /
+cd  /etc/sys...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/sfeng95">来自：	<span class="blog_title"> sfeng95的博客</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_614","con":",https://blog.csdn.net/xinzhangyanxiang/article/details/50926174,BlogCommendHotData_3"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/xinzhangyanxiang/article/details/50926174" target="_blank" title="二值神经网络（Binary Neural Network，BNN）">
+		<h4 class="text-truncate oneline">
+				二值神经网络（Binary Neural Network，BNN）		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">03-18</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					3万+</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/xinzhangyanxiang/article/details/50926174" target="_blank" title="二值神经网络（Binary Neural Network，BNN）">
+				<span class="desc oneline">在我刚刚过去的研究生毕设中，我在ImageNet数据集上验证了图像特征二值化后仍然具有很强的表达能力，可以在检索中达到较好的效果。而Bengio大神的这篇文章，则不止于将特征二值化，而是要将权重和每层...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/xinzhangyanxiang">来自：	<span class="blog_title"> 雨石</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_614","con":",https://blog.csdn.net/ymj7150697/article/details/7384126,BlogCommendHotData_4"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/ymj7150697/article/details/7384126" target="_blank" title="expat介绍文档翻译">
+		<h4 class="text-truncate oneline">
+				expat介绍文档翻译		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">03-22</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					7万+</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/ymj7150697/article/details/7384126" target="_blank" title="expat介绍文档翻译">
+				<span class="desc oneline">原文地址：http://www.xml.com/pub/a/1999/09/expat/index.html
+
+
+因为需要用，所以才翻译了这个文档。但总归赖于英语水平很有限，翻译出来的中文有可能...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/ymj7150697">来自：	<span class="blog_title"> ymj7150697的专栏</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_614","con":",https://blog.csdn.net/ynnmnm/article/details/36774715,BlogCommendHotData_5"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/ynnmnm/article/details/36774715" target="_blank" title="Unity自动打包工具">
+		<h4 class="text-truncate oneline">
+				Unity自动打包工具		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">07-11</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					1万+</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/ynnmnm/article/details/36774715" target="_blank" title="Unity自动打包工具">
+				<span class="desc oneline">Unity一键打包工具，一键生成几十个平台/渠道的安装包。</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/ynnmnm">来自：	<span class="blog_title"> 夜风的BLOG</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_614","con":",https://blog.csdn.net/zhangyihui1986/article/details/13065199,BlogCommendHotData_6"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/zhangyihui1986/article/details/13065199" target="_blank" title="RUtils -- 建立在Rserve之上的Java与R语言通信工具集">
+		<h4 class="text-truncate oneline">
+				RUtils -- 建立在Rserve之上的Java与R语言通信工具集		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">10-26</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					6876</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/zhangyihui1986/article/details/13065199" target="_blank" title="RUtils -- 建立在Rserve之上的Java与R语言通信工具集">
+				<span class="desc oneline">注1：RUtils是我偶然发现的一个工具包，它建立在Rserve之上，可以很大程度上简化我们的程序，关于Rserve网络上有很多相关的内容，这里不对其进行介绍，比如这里：http://blog.fen...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/zhangyihui1986">来自：	<span class="blog_title"> 竹叶青的专栏</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_614","con":",https://blog.csdn.net/maoyuanming0806/article/details/78067446,BlogCommendHotData_7"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/maoyuanming0806/article/details/78067446" target="_blank" title="搭建图片服务器《二》-linux安装nginx">
+		<h4 class="text-truncate oneline">
+				搭建图片服务器《二》-linux安装nginx		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">09-22</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					8万+</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/maoyuanming0806/article/details/78067446" target="_blank" title="搭建图片服务器《二》-linux安装nginx">
+				<span class="desc oneline">nginx是个好东西，Nginx (engine x) 是一个高性能的HTTP和反向代理服务器，也是一个IMAP/POP3/SMTP服务器。Nginx是由伊戈尔·赛索耶夫为俄罗斯访问量第二的Rambl...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/maoyuanming0806">来自：	<span class="blog_title"> maoyuanming0806的博客</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_614","con":",https://blog.csdn.net/s15100007883/article/details/79317504,BlogCommendHotData_8"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/s15100007883/article/details/79317504" target="_blank" title="使用Unity实现卡拉OK歌词过渡效果">
+		<h4 class="text-truncate oneline">
+				使用Unity实现卡拉OK歌词过渡效果		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">02-12</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					1686</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/s15100007883/article/details/79317504" target="_blank" title="使用Unity实现卡拉OK歌词过渡效果">
+				<span class="desc oneline">好长时间之前做过的一个项目 , 其中设计到用Unity模拟卡拉OK歌词过渡的效果 , 如下图所示 ↓ , 这里简单把原理部分分享一下.
+
+
+
+演示效果 ↓
+
+
+
+
+实现歌词动态调整功能
+实现动态读取歌...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/s15100007883">来自：	<span class="blog_title"> 月儿圆</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_614","con":",https://blog.csdn.net/qq_40144709/article/details/78391526,BlogCommendHotData_9"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/qq_40144709/article/details/78391526" target="_blank" title="链接（freemarker）">
+		<h4 class="text-truncate oneline">
+				链接（freemarker）		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">10-30</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					498</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/qq_40144709/article/details/78391526" target="_blank" title="链接（freemarker）">
+				<span class="desc oneline">http://blog.csdn.net/liaomin416100569/article/details/78349072</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/qq_40144709">来自：	<span class="blog_title"> biao285869350</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_614","con":",https://blog.csdn.net/isea533/article/details/49806637,BlogCommendHotData_10"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/isea533/article/details/49806637" target="_blank" title="Docx4j 简单操作文字图片（包含页眉页脚和主体内容）">
+		<h4 class="text-truncate oneline">
+				Docx4j 简单操作文字图片（包含页眉页脚和主体内容）		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">11-12</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					1万+</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/isea533/article/details/49806637" target="_blank" title="Docx4j 简单操作文字图片（包含页眉页脚和主体内容）">
+				<span class="desc oneline">docx4j官方提供了一些例子，本文只是其中一部分应用的简单例子。需要注意的地方是页眉和页脚，必须创建对应关系才能起作用。页眉和页脚添加图片的时候，第二个参数sourcePart是必须的，调用的cre...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/isea533">来自：	<span class="blog_title"> 偶尔记一下</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_614","con":",https://blog.csdn.net/hayixia606/article/details/79237220,BlogCommendHotData_11"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/hayixia606/article/details/79237220" target="_blank" title="微信支付V3微信公众号支付PHP教程(thinkPHP5公众号支付)/JSSDK的使用">
+		<h4 class="text-truncate oneline">
+				微信支付V3微信公众号支付PHP教程(thinkPHP5公众号支付)/JSSDK的使用		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">02-02</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					18万+</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/hayixia606/article/details/79237220" target="_blank" title="微信支付V3微信公众号支付PHP教程(thinkPHP5公众号支付)/JSSDK的使用">
+				<span class="desc oneline">扫二维码关注，获取更多技术分享
+
+
+  本文承接之前发布的博客《 微信支付V3微信公众号支付PHP教程/thinkPHP5公众号支付》必须阅读上篇文章后才可以阅读这篇文章。由于最近一段时间工作比较忙，...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/hayixia606">来自：	<span class="blog_title"> Marswill</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_614","con":",https://blog.csdn.net/ybhuangfugui/article/details/51510482,BlogCommendHotData_12"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/ybhuangfugui/article/details/51510482" target="_blank" title="Keil（MDK-ARM）系列教程（一）_新建软件工程详细过程">
+		<h4 class="text-truncate oneline">
+				Keil（MDK-ARM）系列教程（一）_新建软件工程详细过程		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">05-26</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					6万+</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/ybhuangfugui/article/details/51510482" target="_blank" title="Keil（MDK-ARM）系列教程（一）_新建软件工程详细过程">
+				<span class="desc oneline">推荐
+
+分享一个大神的人工智能教程。零基础！通俗易懂！风趣幽默！还带黄段子！希望你也加入到人工智能的队伍中来！http://www.captainbed.net/strongerhuang
+
+
+
+推荐...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/ybhuangfugui">来自：	<span class="blog_title"> strongerHuang的专栏</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_614","con":",https://blog.csdn.net/u011860731/article/details/48733073,BlogCommendHotData_13"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/u011860731/article/details/48733073" target="_blank" title="ThreadLocal的设计理念与作用">
+		<h4 class="text-truncate oneline">
+				ThreadLocal的设计理念与作用		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">09-25</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					9万+</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/u011860731/article/details/48733073" target="_blank" title="ThreadLocal的设计理念与作用">
+				<span class="desc oneline">Java中的ThreadLocal类允许我们创建只能被同一个线程读写的变量。因此，如果一段代码含有一个ThreadLocal变量的引用，即使两个线程同时执行这段代码，它们也无法访问到对方的Thread...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/u011860731">来自：	<span class="blog_title"> u011860731的专栏</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_614","con":",https://blog.csdn.net/passFuHao/article/details/76545332,BlogCommendHotData_14"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/passFuHao/article/details/76545332" target="_blank" title="如何用一行C++代码读写数据库">
+		<h4 class="text-truncate oneline">
+				如何用一行C++代码读写数据库		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">08-01</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					9263</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/passFuHao/article/details/76545332" target="_blank" title="如何用一行C++代码读写数据库">
+				<span class="desc oneline">这篇文章要表达的并非数据库相关的知识，而是如何使用DBIOWrapper。       DBIOWrapper是一个工作在Windows下、对ODBC式数据访问进行了小型封装的库。其设计目标是提供极简...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/passFuHao">来自：	<span class="blog_title"> 哈哈 哈 哈哈，哈 哈 哈哈哈</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_614","con":",https://blog.csdn.net/qq574857122/article/details/16361033,BlogCommendHotData_15"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/qq574857122/article/details/16361033" target="_blank" title="强连通分量及缩点tarjan算法解析">
+		<h4 class="text-truncate oneline">
+				强连通分量及缩点tarjan算法解析		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">11-16</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					66万+</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/qq574857122/article/details/16361033" target="_blank" title="强连通分量及缩点tarjan算法解析">
+				<span class="desc oneline">强连通分量：
+简言之 就是找环（每条边只走一次，两两可达）
+孤立的一个点也是一个连通分量 
+ 
+使用tarjan算法 在嵌套的多个环中优先得到最大环( 最小环就是每个孤立点）
+ 
+定义：
+int Ti...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/qq574857122">来自：	<span class="blog_title"> 九野的博客</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_614","con":",https://blog.csdn.net/llxsharp/article/details/3888030,BlogCommendHotData_16"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/llxsharp/article/details/3888030" target="_blank" title="忘记Oracle数据库管理员密码的解决办法">
+		<h4 class="text-truncate oneline">
+				忘记Oracle数据库管理员密码的解决办法		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">02-13</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					1万+</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/llxsharp/article/details/3888030" target="_blank" title="忘记Oracle数据库管理员密码的解决办法">
+				<span class="desc oneline">安装oracle 9i后，居然把刚刚更改的数据库管理员密码给忘了，又不重新安装，太麻烦了，试了好久，终于修改成功了。1、运行到C盘根目录2、输入：SET ORACLE_SID = 你的SID名称3、输...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/llxsharp">来自：	<span class="blog_title"> llxsharp的专栏</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_614","con":",https://blog.csdn.net/wwj_748/article/details/30072379,BlogCommendHotData_17"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/wwj_748/article/details/30072379" target="_blank" title="Cocos2d-x 2.2.3 使用NDK配置编译环境">
+		<h4 class="text-truncate oneline">
+				Cocos2d-x 2.2.3 使用NDK配置编译环境		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">06-11</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					2万+</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/wwj_748/article/details/30072379" target="_blank" title="Cocos2d-x 2.2.3 使用NDK配置编译环境">
+				<span class="desc oneline">Cocos2d-x 2.2.3 使用NDK配置编译环境2014年6月11日 Cocos2d-x 3.0以下的开发环境的配置恐怕折磨了很多人，使用cygwin配置编译环境足够让初学者蛋疼一阵子了。本篇博...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/wwj_748">来自：	<span class="blog_title"> 巫山老妖</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_614","con":",https://blog.csdn.net/wuchengzeng/article/details/50037611,BlogCommendHotData_18"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/wuchengzeng/article/details/50037611" target="_blank" title="jquery/js实现一个网页同时调用多个倒计时(最新的)">
+		<h4 class="text-truncate oneline">
+				jquery/js实现一个网页同时调用多个倒计时(最新的)		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">11-25</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					54万+</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/wuchengzeng/article/details/50037611" target="_blank" title="jquery/js实现一个网页同时调用多个倒计时(最新的)">
+				<span class="desc oneline">jquery/js实现一个网页同时调用多个倒计时(最新的)
+
+最近需要网页添加多个倒计时. 查阅网络,基本上都是千遍一律的不好用. 自己按需写了个.希望对大家有用. 有用请赞一个哦!
+
+
+
+//js
+...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/wuchengzeng">来自：	<span class="blog_title"> Websites</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_614","con":",https://blog.csdn.net/gefangshuai/article/details/50328451,BlogCommendHotData_19"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/gefangshuai/article/details/50328451" target="_blank" title="关于SpringBoot bean无法注入的问题（与文件包位置有关）">
+		<h4 class="text-truncate oneline">
+				关于SpringBoot bean无法注入的问题（与文件包位置有关）		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">12-16</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					27万+</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/gefangshuai/article/details/50328451" target="_blank" title="关于SpringBoot bean无法注入的问题（与文件包位置有关）">
+				<span class="desc oneline">问题场景描述整个项目通过Maven构建，大致结构如下：
+核心Spring框架一个module spring-boot-base
+service和dao一个module server-core
+提供系统...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/gefangshuai">来自：	<span class="blog_title"> 开发随笔</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_614","con":",https://blog.csdn.net/zp_00000/article/details/70207445,BlogCommendHotData_20"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/zp_00000/article/details/70207445" target="_blank" title="VirtualBox COM获取对象失败">
+		<h4 class="text-truncate oneline">
+				VirtualBox COM获取对象失败		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">04-17</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					4万+</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/zp_00000/article/details/70207445" target="_blank" title="VirtualBox COM获取对象失败">
+				<span class="desc oneline">错误详情
+
+
+
+
+
+1. 先来看看错误详情
+获取 VirtualBox COM 对象失败.应用程序将被中断.Failed to instantiate CLSID_VirtualBox ...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/zp_00000">来自：	<span class="blog_title"> 多点折腾少点抱怨</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_614","con":",https://blog.csdn.net/caiwenguang1992/article/details/9330055,BlogCommendHotData_21"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/caiwenguang1992/article/details/9330055" target="_blank" title="Solaris11挂载光盘">
+		<h4 class="text-truncate oneline">
+				Solaris11挂载光盘		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">07-15</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					1745</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/caiwenguang1992/article/details/9330055" target="_blank" title="Solaris11挂载光盘">
+				<span class="desc oneline">将ISO写入光盘
+cdrecord sol-11_1-repo-full.iso
+
+弹出光盘
+root@solaris:/media# eject cdrom
+cdrom /dev/dsk/c7t0d...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/caiwenguang1992">来自：	<span class="blog_title"> 数据之路-忆梦前程</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_614","con":",https://blog.csdn.net/lubiaopan/article/details/6233517,BlogCommendHotData_22"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/lubiaopan/article/details/6233517" target="_blank" title=".NET和java的RSA互通，仅此而已">
+		<h4 class="text-truncate oneline">
+				.NET和java的RSA互通，仅此而已		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">03-09</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					7万+</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/lubiaopan/article/details/6233517" target="_blank" title=".NET和java的RSA互通，仅此而已">
+				<span class="desc oneline">RSA .net jva 互通 解决不能互通的问题</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/lubiaopan">来自：	<span class="blog_title"> lubiaopan的专栏</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_614","con":",https://blog.csdn.net/trochiluses/article/details/19438837,BlogCommendHotData_23"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/trochiluses/article/details/19438837" target="_blank" title="保护模式及其编程——8086系统寄存器和系统指令">
+		<h4 class="text-truncate oneline">
+				保护模式及其编程——8086系统寄存器和系统指令		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">02-18</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					1233</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/trochiluses/article/details/19438837" target="_blank" title="保护模式及其编程——8086系统寄存器和系统指令">
+				<span class="desc oneline">摘要：为了协助处理器完成初始化和控制系统操作，80x86提供了一个标志寄存器和几个系统寄存器。Eflags用于控制任务切换、中断处理、指令跟踪和权限访问。系统寄存器用于内存管理和控制处理器操作。
+
+1...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/trochiluses">来自：	<span class="blog_title"> 河西无名式</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_614","con":",https://blog.csdn.net/yzp_soft/article/details/18603553,BlogCommendHotData_24"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/yzp_soft/article/details/18603553" target="_blank" title="IE9 table显示问题,td出现错位的解决方法">
+		<h4 class="text-truncate oneline">
+				IE9 table显示问题,td出现错位的解决方法		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">01-21</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					5461</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/yzp_soft/article/details/18603553" target="_blank" title="IE9 table显示问题,td出现错位的解决方法">
+				<span class="desc oneline">IE9 table显示问题
+
+
+
+
+IE9 大数据行table的显示会出现列错位
+
+原因是IE9的BUG
+
+
+
+
+在jsp中使用 table加载大数据量时，td会出现错位,在f...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/yzp_soft">来自：	<span class="blog_title"> yzp_soft的专栏</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_614","con":",https://blog.csdn.net/qq_14997169/article/details/54299034,BlogCommendHotData_25"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/qq_14997169/article/details/54299034" target="_blank" title="仿饿了么">
+		<h4 class="text-truncate oneline">
+				仿饿了么		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">05-10</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					322</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/qq_14997169/article/details/54299034" target="_blank" title="仿饿了么">
+				<span class="desc oneline">http://blog.csdn.net/zxt0601/article/details/54235736</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/qq_14997169">来自：	<span class="blog_title"> 小马哥nice的博客</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_614","con":",https://blog.csdn.net/lxcao/article/details/52749421,BlogCommendHotData_26"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/lxcao/article/details/52749421" target="_blank" title="Web前端面试指导(三十)：JavaScript有几种类型的值？你能画一下他们的内存图吗？">
+		<h4 class="text-truncate oneline">
+				Web前端面试指导(三十)：JavaScript有几种类型的值？你能画一下他们的内存图吗？		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">10-07</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					7718</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/lxcao/article/details/52749421" target="_blank" title="Web前端面试指导(三十)：JavaScript有几种类型的值？你能画一下他们的内存图吗？">
+				<span class="desc oneline">题目点评
+数据类型是所有程序都会涉及到的，是计算机语言比较基础知识，这种问题被问到的可能性其实并不大，这样的题目只要花点时间把它记下来就好了，难易程度一般。
+ 两大类：
+栈：原始数据类型（Und...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/lxcao">来自：	<span class="blog_title"> 雄领IT的专栏</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_614","con":",https://blog.csdn.net/leedaning/article/details/48546509,BlogCommendHotData_27"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/leedaning/article/details/48546509" target="_blank" title="git丢掉本地的修改，还原修改之前的程序">
+		<h4 class="text-truncate oneline">
+				git丢掉本地的修改，还原修改之前的程序		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">09-18</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					2437</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/leedaning/article/details/48546509" target="_blank" title="git丢掉本地的修改，还原修改之前的程序">
+				<span class="desc oneline">今天在本地做了修改，后来又不想要这次修改的内容，想要还原到修改之前的状态，有一个比较省力的方法，直接从git服务器对应的分支获取覆盖本地的程序。 
+命令如下：git checkout  -f 
+这样就...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/leedaning">来自：	<span class="blog_title"> leedaning的专栏</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_614","con":",https://blog.csdn.net/SunCherryDream/article/details/75731408,BlogCommendHotData_28"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/SunCherryDream/article/details/75731408" target="_blank" title="origion绘制热图">
+		<h4 class="text-truncate oneline">
+				origion绘制热图		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">07-22</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					6588</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/SunCherryDream/article/details/75731408" target="_blank" title="origion绘制热图">
+				<span class="desc oneline">有时我们需要绘制热图，用x轴、y轴表示两维数据，用颜色表示第三维
+第一步：需要准备三列数据，如图1，这里我用U表示x轴数据，它的取值范围为[0-1]，间隔为0.05，E表示y轴，取值范围也是[0-1]...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/SunCherryDream">来自：	<span class="blog_title"> SunCherryDream的专栏</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+<div class="recommend-item-box type_blog clearfix"  data-track-click='{"mod":"popu_614","con":",https://blog.csdn.net/zhhp1001/article/details/79004559,BlogCommendHotData_29"}'>
+	<div class="content">
+		<a href="https://blog.csdn.net/zhhp1001/article/details/79004559" target="_blank" title="VS2015+Qt5+OpenCV3开发环境配置">
+		<h4 class="text-truncate oneline">
+				VS2015+Qt5+OpenCV3开发环境配置		</h4>
+		<div class="info-box d-flex align-content-center">
+			<p class="date-and-readNum oneline">
+				<span class="date hover-show">01-08</span>
+				<span class="read-num hover-hide">
+					阅读数 
+					1万+</span>
+				</p>
+			</div>
+		</a>
+		<p class="content">
+			<a href="https://blog.csdn.net/zhhp1001/article/details/79004559" target="_blank" title="VS2015+Qt5+OpenCV3开发环境配置">
+				<span class="desc oneline">本文介绍如何使用VS2015作为编译开发环境，调用OpenCV3.31和Qt5.9.1写图像处理的GUI。
+1.目录结构
+假设我们要创建一个名为VideoZoom的工程，那么首先按下图构建目录结构...</span>
+			</a>
+			<span class="blog_title_box oneline ">
+									<span class="type-show type-show-blog type-show-after">博文</span>
+											<a target="_blank" href="https://blog.csdn.net/zhhp1001">来自：	<span class="blog_title"> zhhp1001的博客</span></a>
+												</span>
+		</p>
+	</div>
+	</div>
+
+	
+	
+                <div class="recommend-item-box type_hot_word">
+                                <div class="content clearfix">
+                    <div class="word float-left">
+                                                            <span>
+                        <a href="https://edu.csdn.net/combos/o363_l0_t " target="_blank">
+                        设计制作学习                    </a></span>
+                                                                                <span>
+                        <a href="https://edu.csdn.net/courses/o5329_s5330_k " target="_blank">
+                        机器学习教程                    </a></span>
+                                                                                <span>
+                        <a href="https://edu.csdn.net/courses/o280_s351_k " target="_blank">
+                        Objective-C培训                    </a></span>
+                                                                                <span>
+                        <a href="https://edu.csdn.net/combos/o7115_s388_l0_t " target="_blank">
+                        交互设计视频教程                    </a></span>
+                                                                                <span>
+                        <a href="https://edu.csdn.net/course/play/5599/104252 " target="_blank">
+                        颜色模型                    </a></span>
+                                                            </div>
+                </div>
+                                                <div class="content clearfix">
+                    <div class="float-left">
+                                        <span>
+                        <a href="https://www.csdn.net/gather_24/MtTaEg3sMDM5MS1ibG9n.html" target="_blank">
+                        mysql关联查询两次本表</a>
+                    </span>
+                                        <span>
+                        <a href="https://www.csdn.net/gather_10/MtjaIg3sMTUzMy1kb3dubG9hZAO0O0OO0O0O.html" target="_blank">
+                        native底部 react</a>
+                    </span>
+                                        <span>
+                        <a href="https://www.csdn.net/gather_1b/Ntzagg1sOTU3LWRvd25sb2Fk.html" target="_blank">
+                        extjs glyph 图标</a>
+                    </span>
+                                        <span>
+                        <a href="https://www.csdn.net/gather_4a/OtTaYg4sNy1lZHUO0O0O.html" target="_blank">
+                        人工智能摄像头价格</a>
+                    </span>
+                                        <span>
+                        <a href="https://www.csdn.net/gather_4a/MtzaMg0sNDEtZWR1.html" target="_blank">
+                        物联网摄像头价格</a>
+                    </span>
+                                        </div>
+                </div>
+                                </div>
+                            <div class="recommend-loading-box">
+                <img src='https://csdnimg.cn/release/phoenix/images/feedLoading.gif'>
+            </div>
+            <div class="recommend-end-box">
+                <p class="text-center">没有更多推荐了，<a href="https://blog.csdn.net/" class="c-blue c-blue-hover c-blue-focus">返回首页</a></p>
+            </div>
+        </div>
+    </main>
+
+    <aside>
+	<div id="asideProfile" class="aside-box">
+    <!-- <h3 class="aside-title">个人资料</h3> -->
+    <div class="profile-intro d-flex">
+        <div class="avatar-box d-flex justify-content-center flex-column">
+            <a href="https://blog.csdn.net/qq563129582">
+              <img src="https://avatar.csdn.net/2/E/3/3_qq563129582.jpg" class="avatar_pic">
+                              <img src="https://g.csdnimg.cn/static/user-reg-year/1x/8.png" class="user-years">
+                          </a>
+            
+        </div>
+        <div class="user-info d-flex justify-content-center flex-column">
+            <p class="name csdn-tracking-statistics tracking-click" data-mod="popu_379">
+                <a href="https://blog.csdn.net/qq563129582" target="_blank" class="" id="uid">PassionY</a>
+            </p>
+                    </div>
+                <div class="opt-box d-flex justify-content-center flex-column">
+            <span  class="csdn-tracking-statistics tracking-click" data-mod="popu_379">
+                <a class="btn btn-sm btn-red-hollow attention" id="btnAttent">关注</a>
+            </span>
+        </div>
+            </div>
+    <div class="data-info d-flex item-tiling">
+                <dl class="text-center" title="88">
+                        <dt><a href="https://blog.csdn.net/yupu56?t=1">原创</a></dt>
+            <dd><a href="https://blog.csdn.net/yupu56?t=1"><span class="count">88</span></a></dd>
+                    </dl>
+        <dl class="text-center" id="fanBox" title="457">
+            <dt>粉丝</dt>
+            <dd><span class="count" id="fan">457</span></dd>
+        </dl>
+        <dl class="text-center" title="270">
+            <dt>喜欢</dt>
+            <dd><span class="count">270</span></dd>
+        </dl>
+        <dl class="text-center" title="0">
+            <dt>评论</dt>
+            <dd><span class="count">0</span></dd>
+        </dl>
+    </div>
+    <div class="grade-box clearfix">
+        <dl>
+            <dt>等级：</dt>
+            <dd>
+                <a href="https://blog.csdn.net/home/help.html#level" title="6级,点击查看等级说明" target="_blank">
+                    <svg class="icon icon-level" aria-hidden="true">
+                        <use xlink:href="#csdnc-bloglevel-6"></use>
+                    </svg>
+                </a>
+            </dd>
+        </dl>
+        <dl>
+            <dt>访问：</dt>
+            <dd title="910935">
+                91万+            </dd>
+        </dl>
+        <dl>
+            <dt>积分：</dt>
+            <dd title="8974">
+                8974            </dd>
+        </dl>
+        <dl title="3741">
+            <dt>排名：</dt>
+            <dd>3741</dd>
+        </dl>
+    </div>
+        <div class="badge-box d-flex">
+        <span>勋章：</span>
+        <div class="badge d-flex">
+                                                        <div class="icon-badge" title="持之以恒">
+                       <div class="mouse-box">
+                          <img src="https://g.csdnimg.cn/static/user-medal/chizhiyiheng.svg" alt="">
+                          <div class="icon-arrow"></div>
+                       </div>
+                       <div class="grade-detail-box">
+                           <div class="pos-box">
+                               <div class="left-box d-flex justify-content-center align-items-center flex-column">
+                                    <img src="https://g.csdnimg.cn/static/user-medal/chizhiyiheng.svg" alt="">
+                                   <p>持之以恒</p>
+                               </div>
+                               <div class="right-box">
+                                   授予每个自然月内发布4篇或4篇以上原创或翻译IT博文的用户。不积跬步无以至千里，不积小流无以成江海，程序人生的精彩需要坚持不懈地积累！                               </div>
+                           </div>
+                       </div>
+                   </div>
+                                                             <div class="icon-badge" title="勤写标兵Lv1">
+                       <div class="mouse-box">
+                          <img src="https://g.csdnimg.cn/static/user-medal/qinxiebiaobing_l1_t1.svg" alt="">
+                          <div class="icon-arrow"></div>
+                       </div>
+                       <div class="grade-detail-box">
+                           <div class="pos-box">
+                               <div class="left-box d-flex justify-content-center align-items-center flex-column">
+                                    <img src="https://g.csdnimg.cn/static/user-medal/qinxiebiaobing_l1_t1.svg" alt="">
+                                   <p>勤写标兵Lv1</p>
+                               </div>
+                               <div class="right-box">
+                                   授予每个自然周发布1篇到3篇原创IT博文的用户。本勋章将于次周上午根据用户上周的博文发布情况由系统自动颁发。                               </div>
+                           </div>
+                       </div>
+                   </div>
+                                             </div>
+        <script>
+            (function ($) {
+                setTimeout(function(){
+                    $('div.icon-badge.show-moment').removeClass('show-moment');
+                }, 5000);
+            })(window.jQuery)
+        </script>
+    </div>
+    </div>
+<div class="csdn-tracking-statistics mb8 box-shadow" data-pid="blog" data-mod="popu_4" style="height:250px;">
+    <div class="aside-content text-center" id="cpro_u2734133">
+      <div id="kp_box_56" data-pid="56" data-track-view='{"mod":"kp_popu_56-703","con":",,"}' data-track-click='{"mod":"kp_popu_56-703","con":",,"}'><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 博客内页左上视窗-20181120 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-1076724771190722"
+     data-ad-slot="7700527946"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>    </div>
+</div>
+<div id="asideNewArticle" class="aside-box">
+    <h3 class="aside-title">最新文章</h3>
+    <div class="aside-content">
+        <ul class="inf_list clearfix csdn-tracking-statistics tracking-click" data-mod="popu_382">
+                        <li class="clearfix">
+                <a href="https://blog.csdn.net/qq563129582/article/details/90904282" target="_blank">面试经典算法题--爬楼梯 的六种解法</a>
+            </li>
+                        <li class="clearfix">
+                <a href="https://blog.csdn.net/qq563129582/article/details/89389755" target="_blank">CocosCreator入门</a>
+            </li>
+                        <li class="clearfix">
+                <a href="https://blog.csdn.net/qq563129582/article/details/89379324" target="_blank">Cocos2dx入门</a>
+            </li>
+                        <li class="clearfix">
+                <a href="https://blog.csdn.net/qq563129582/article/details/89322941" target="_blank">cocos2d-x3.0 物理引擎之详解</a>
+            </li>
+                        <li class="clearfix">
+                <a href="https://blog.csdn.net/qq563129582/article/details/88874559" target="_blank">ulua常见面试题</a>
+            </li>
+                    </ul>
+    </div>
+</div>
+<div id="asideCategory" class="aside-box flexible-box">
+    <h3 class="aside-title">个人分类</h3>
+    <div class="aside-content">
+        <ul>
+                        <li>
+                <a class="clearfix" href="https://blog.csdn.net/qq563129582/article/category/1728937">
+                    <span class="title oneline">IOS App</span>
+                    <span class="count float-right">20篇</span>
+                </a>
+            </li>
+                        <li>
+                <a class="clearfix" href="https://blog.csdn.net/qq563129582/article/category/2256843">
+                    <span class="title oneline">Cocos2d-x</span>
+                    <span class="count float-right">30篇</span>
+                </a>
+            </li>
+                        <li>
+                <a class="clearfix" href="https://blog.csdn.net/qq563129582/article/category/2256847">
+                    <span class="title oneline">Mac OSX</span>
+                    <span class="count float-right">7篇</span>
+                </a>
+            </li>
+                        <li>
+                <a class="clearfix" href="https://blog.csdn.net/qq563129582/article/category/2256849">
+                    <span class="title oneline">C/C++</span>
+                    <span class="count float-right">14篇</span>
+                </a>
+            </li>
+                        <li>
+                <a class="clearfix" href="https://blog.csdn.net/qq563129582/article/category/2812569">
+                    <span class="title oneline">情感散文</span>
+                    <span class="count float-right">4篇</span>
+                </a>
+            </li>
+                        <li>
+                <a class="clearfix" href="https://blog.csdn.net/qq563129582/article/category/3054925">
+                    <span class="title oneline">Unity</span>
+                    <span class="count float-right">158篇</span>
+                </a>
+            </li>
+                        <li>
+                <a class="clearfix" href="https://blog.csdn.net/qq563129582/article/category/5950315">
+                    <span class="title oneline">Python</span>
+                    <span class="count float-right">7篇</span>
+                </a>
+            </li>
+                        <li>
+                <a class="clearfix" href="https://blog.csdn.net/qq563129582/article/category/6527987">
+                    <span class="title oneline">Linux</span>
+                    <span class="count float-right">3篇</span>
+                </a>
+            </li>
+                        <li>
+                <a class="clearfix" href="https://blog.csdn.net/qq563129582/article/category/6921843">
+                    <span class="title oneline">C#</span>
+                    <span class="count float-right">9篇</span>
+                </a>
+            </li>
+                        <li>
+                <a class="clearfix" href="https://blog.csdn.net/qq563129582/article/category/7016164">
+                    <span class="title oneline">Lua</span>
+                    <span class="count float-right">4篇</span>
+                </a>
+            </li>
+                        <li>
+                <a class="clearfix" href="https://blog.csdn.net/qq563129582/article/category/8454074">
+                    <span class="title oneline">windows</span>
+                    <span class="count float-right">1篇</span>
+                </a>
+            </li>
+                    </ul>
+    </div>
+        <p class="text-center">
+        <a class="btn btn-link-blue flexible-btn" data-fbox="aside-archive">展开</a>
+    </p>
+    </div>
+<div id="asideArchive" class="aside-box flexible-box">
+    <h3 class="aside-title">归档</h3>
+    <div class="aside-content">
+        <ul class="archive-list">
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/qq563129582/article/month/2019/06">
+                    2019年6月                    <span class="count float-right">1篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/qq563129582/article/month/2019/04">
+                    2019年4月                    <span class="count float-right">3篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/qq563129582/article/month/2019/03">
+                    2019年3月                    <span class="count float-right">3篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/qq563129582/article/month/2019/02">
+                    2019年2月                    <span class="count float-right">1篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/qq563129582/article/month/2019/01">
+                    2019年1月                    <span class="count float-right">1篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/qq563129582/article/month/2018/11">
+                    2018年11月                    <span class="count float-right">2篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/qq563129582/article/month/2018/10">
+                    2018年10月                    <span class="count float-right">3篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/qq563129582/article/month/2018/09">
+                    2018年9月                    <span class="count float-right">2篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/qq563129582/article/month/2018/08">
+                    2018年8月                    <span class="count float-right">2篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/qq563129582/article/month/2018/06">
+                    2018年6月                    <span class="count float-right">1篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/qq563129582/article/month/2018/05">
+                    2018年5月                    <span class="count float-right">1篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/qq563129582/article/month/2018/03">
+                    2018年3月                    <span class="count float-right">6篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/qq563129582/article/month/2018/02">
+                    2018年2月                    <span class="count float-right">2篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/qq563129582/article/month/2017/11">
+                    2017年11月                    <span class="count float-right">1篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/qq563129582/article/month/2017/10">
+                    2017年10月                    <span class="count float-right">1篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/qq563129582/article/month/2017/09">
+                    2017年9月                    <span class="count float-right">3篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/qq563129582/article/month/2017/08">
+                    2017年8月                    <span class="count float-right">5篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/qq563129582/article/month/2017/07">
+                    2017年7月                    <span class="count float-right">7篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/qq563129582/article/month/2017/06">
+                    2017年6月                    <span class="count float-right">10篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/qq563129582/article/month/2017/05">
+                    2017年5月                    <span class="count float-right">11篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/qq563129582/article/month/2017/04">
+                    2017年4月                    <span class="count float-right">3篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/qq563129582/article/month/2017/03">
+                    2017年3月                    <span class="count float-right">1篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/qq563129582/article/month/2017/02">
+                    2017年2月                    <span class="count float-right">3篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/qq563129582/article/month/2017/01">
+                    2017年1月                    <span class="count float-right">6篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/qq563129582/article/month/2016/12">
+                    2016年12月                    <span class="count float-right">22篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/qq563129582/article/month/2016/11">
+                    2016年11月                    <span class="count float-right">15篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/qq563129582/article/month/2016/10">
+                    2016年10月                    <span class="count float-right">11篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/qq563129582/article/month/2016/09">
+                    2016年9月                    <span class="count float-right">1篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/qq563129582/article/month/2016/08">
+                    2016年8月                    <span class="count float-right">4篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/qq563129582/article/month/2016/07">
+                    2016年7月                    <span class="count float-right">4篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/qq563129582/article/month/2016/06">
+                    2016年6月                    <span class="count float-right">4篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/qq563129582/article/month/2016/03">
+                    2016年3月                    <span class="count float-right">2篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/qq563129582/article/month/2016/02">
+                    2016年2月                    <span class="count float-right">1篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/qq563129582/article/month/2016/01">
+                    2016年1月                    <span class="count float-right">8篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/qq563129582/article/month/2015/12">
+                    2015年12月                    <span class="count float-right">9篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/qq563129582/article/month/2015/11">
+                    2015年11月                    <span class="count float-right">10篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/qq563129582/article/month/2015/10">
+                    2015年10月                    <span class="count float-right">1篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/qq563129582/article/month/2015/08">
+                    2015年8月                    <span class="count float-right">4篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/qq563129582/article/month/2015/07">
+                    2015年7月                    <span class="count float-right">8篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/qq563129582/article/month/2015/05">
+                    2015年5月                    <span class="count float-right">1篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/qq563129582/article/month/2015/04">
+                    2015年4月                    <span class="count float-right">2篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/qq563129582/article/month/2015/03">
+                    2015年3月                    <span class="count float-right">2篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/qq563129582/article/month/2015/02">
+                    2015年2月                    <span class="count float-right">6篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/qq563129582/article/month/2015/01">
+                    2015年1月                    <span class="count float-right">9篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/qq563129582/article/month/2014/12">
+                    2014年12月                    <span class="count float-right">3篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/qq563129582/article/month/2014/11">
+                    2014年11月                    <span class="count float-right">2篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/qq563129582/article/month/2014/08">
+                    2014年8月                    <span class="count float-right">1篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/qq563129582/article/month/2014/07">
+                    2014年7月                    <span class="count float-right">2篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/qq563129582/article/month/2014/06">
+                    2014年6月                    <span class="count float-right">5篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/qq563129582/article/month/2014/05">
+                    2014年5月                    <span class="count float-right">6篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/qq563129582/article/month/2014/04">
+                    2014年4月                    <span class="count float-right">1篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/qq563129582/article/month/2014/03">
+                    2014年3月                    <span class="count float-right">2篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/qq563129582/article/month/2014/02">
+                    2014年2月                    <span class="count float-right">7篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/qq563129582/article/month/2014/01">
+                    2014年1月                    <span class="count float-right">6篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/qq563129582/article/month/2013/11">
+                    2013年11月                    <span class="count float-right">1篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/qq563129582/article/month/2013/10">
+                    2013年10月                    <span class="count float-right">1篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/qq563129582/article/month/2013/08">
+                    2013年8月                    <span class="count float-right">7篇</span>
+                </a>
+            </li>
+                    </ul>
+    </div>
+        <p class="text-center">
+        <a class="btn btn-link-blue flexible-btn" data-fbox="aside-archive">展开</a>
+    </p>
+    </div>
+<div id="asideHotArticle" class="aside-box">
+	<h3 class="aside-title">热门文章</h3>
+	<div class="aside-content">
+		<ul class="hotArticle-list csdn-tracking-statistics tracking-click" data-mod="popu_521">
+							<li>
+					<a href="https://blog.csdn.net/qq563129582/article/details/50470970">win10 安装 Python 和 pip 详解</a>
+					<p class="read">阅读数 <span>36605</span></p>
+				</li>
+							<li>
+					<a href="https://blog.csdn.net/qq563129582/article/details/50580277">Unity Excel 文件读取和写入</a>
+					<p class="read">阅读数 <span>34876</span></p>
+				</li>
+							<li>
+					<a href="https://blog.csdn.net/qq563129582/article/details/50471119">Python 图形处理库PIL批量修改图片大小和格式</a>
+					<p class="read">阅读数 <span>32835</span></p>
+				</li>
+							<li>
+					<a href="https://blog.csdn.net/qq563129582/article/details/53186410">Win下Cygwin的安装</a>
+					<p class="read">阅读数 <span>28295</span></p>
+				</li>
+							<li>
+					<a href="https://blog.csdn.net/qq563129582/article/details/71153902">mac删除分区并合并分区</a>
+					<p class="read">阅读数 <span>27699</span></p>
+				</li>
+					</ul>
+	</div>
+</div>
+<div id="asideNewComments" class="aside-box">
+    <h3 class="aside-title">最新评论</h3>
+    <div class="aside-content">
+        <ul class="newcomment-list">
+                        <li>
+                <a class="title text-truncate" target="_blank" href="https://blog.csdn.net/qq563129582/article/details/50436839#comments">A星寻路算法之RVO动态寻路</a>
+                <p class="comment ellipsis">
+                    <a href="https://my.csdn.net/weixin_43302818" class="user-name" target="_blank">weixin_43302818：</a>？？？                </p>
+            </li>
+                        <li>
+                <a class="title text-truncate" target="_blank" href="https://blog.csdn.net/qq563129582/article/details/50436839#comments">A星寻路算法之RVO动态寻路</a>
+                <p class="comment ellipsis">
+                    <a href="https://my.csdn.net/u013895878" class="user-name" target="_blank">u013895878：</a>zz                </p>
+            </li>
+                        <li>
+                <a class="title text-truncate" target="_blank" href="https://blog.csdn.net/qq563129582/article/details/50436839#comments">A星寻路算法之RVO动态寻路</a>
+                <p class="comment ellipsis">
+                    <a href="https://my.csdn.net/qq_43614427" class="user-name" target="_blank">qq_43614427：</a>z z                </p>
+            </li>
+                        <li>
+                <a class="title text-truncate" target="_blank" href="https://blog.csdn.net/qq563129582/article/details/82873362#comments">unity七日签到系统</a>
+                <p class="comment ellipsis">
+                    <a href="https://my.csdn.net/qq_29328033" class="user-name" target="_blank">qq_29328033：</a>？？？                </p>
+            </li>
+                        <li>
+                <a class="title text-truncate" target="_blank" href="https://blog.csdn.net/qq563129582/article/details/53186410#comments">Win下Cygwin的安装</a>
+                <p class="comment ellipsis">
+                    <a href="https://my.csdn.net/intellectualman" class="user-name" target="_blank">intellectualman：</a>http://mirrors.163.com/cygwin/好用                </p>
+            </li>
+                    </ul>
+    </div>
+</div>
+	<div id="asideFooter">
+			
+		<div class="aside-box">
+			<div id="kp_box_57" data-pid="57" data-track-view='{"mod":"kp_popu_57-1158","con":",,"}' data-track-click='{"mod":"kp_popu_57-1158","con":",,"}'><!-- 广告位：PC-博客内页左下视窗 -->
+<script>
+(function() {
+    var s = "_" + Math.random().toString(36).slice(2);
+    document.write('<div id="' + s + '"></div>');
+    (window.slotbydup=window.slotbydup || []).push({
+        id: '6272567',
+        container: s,
+        size: '300,250',
+        display: 'inlay-fix'
+    });
+})();
+</script>
+<script src="https://dup.baidustatic.com/js/os.js"></script></div>		</div>
+				<div class="aside-box">
+			<div class="persion_article">
+			</div>
+		</div>
+	</div>
+</aside>
+<script src="https://csdnimg.cn/pubfooter/js/publib_footer-1.0.3.js" data-isfootertrack="false" type="text/javascript"></script>
+<script>
+	$("a.flexible-btn").click(function(){
+		$(this).parents('div.aside-box').removeClass('flexible-box');
+		$(this).remove();
+	})
+</script>
+</div>
+<div class="mask-dark"></div>
+<div class="tool-box">
+	<ul class="meau-list">
+		<li class="btn-like-box long-width">
+			<button class=" long-height hover-box btn-like " title="点赞">
+				<svg class="icon active hover-hide" aria-hidden="true">
+					<use xlink:href="#csdnc-thumbsup-ok"></use>
+				</svg>
+				<svg class="icon no-active hover-hide" aria-hidden="true">
+					<use xlink:href="#csdnc-thumbsup"></use>
+				</svg>
+				<span class="hover-show text-box text">
+					<span class="no-active">点赞</span>
+					<span class="active">取消点赞</span>
+				</span>
+				<p>6</p>
+			</button>
+		</li>
+		<li class="">
+						<a class="btn-comments low-height hover-box" title="写评论" href="#commentBox">
+				<svg class="icon hover-hide" aria-hidden="true">
+					<use xlink:href="#csdnc-comments"></use>
+				</svg>
+				<span class="hover-show text">评论</span>
+				<p class="">
+										</p>
+			</a>
+		</li>
+		<li class="toc-container-box" id="liTocBox">
+			<button class="btn-toc low-height hover-box" title="目录">
+				<svg class="icon hover-hide" aria-hidden="true">
+					<use xlink:href="#csdnc-contents"></use>
+				</svg>
+				<span class="hover-show text">目录</span>
+			</button>
+			<div class="toc-container">
+				<div class="pos-box">
+					<div class="icon-arrow"></div>
+					<div class="scroll-box">
+						<div class="toc-box"></div>
+					</div>
+				</div>
+				<div class="opt-box">
+					<button class="btn-opt prev nomore" title="向上">
+						<svg class="icon" aria-hidden="true">
+							<use xlink:href="#csdnc-chevronup"></use>
+						</svg>
+					</button>
+					<button class="btn-opt next">
+						<svg class="icon" aria-hidden="true">
+							<use xlink:href="#csdnc-chevrondown"></use>
+						</svg>
+					</button>
+				</div>
+			</div>
+		</li>
+		<li>
+			<button class="btn-bookmark low-height hover-box" title="收藏">
+				<svg class="icon active hover-hide" aria-hidden="true">
+					<use xlink:href="#csdnc-bookmark-ok"></use>
+				</svg>
+				<svg class="icon no-active hover-hide" aria-hidden="true">
+					<use xlink:href="#csdnc-bookmark"></use>
+				</svg>
+					<span class="hover-show text">收藏</span>
+				<!-- <span class="hover-show text-box text">
+					<span class="no-active">收藏</span>
+					<span class="active">取消收藏</span>
+				</span> -->
+			</button>
+		</li>
+		<li class="bdsharebuttonbox">
+			<div class="weixin-qr btn-comments low-height hover-box" >
+        <a href="#" class="bds_weixin clear-share-style" data-cmd="weixin" title="手机看"></a>
+				<svg class="icon hover-hide" aria-hidden="true">
+					<use xlink:href="#csdnc-usephone"></use>
+				</svg>
+				<span class="hover-show text text3">
+					手机看
+				</span>
+			</div>
+		</li>
+							<li class="widescreen-hide">
+				<a class="btn-comments low-height hover-box" href="https://blog.csdn.net/yupu56/article/details/45077217" title="Unity3D换装详解">
+					<svg class="icon hover-hide" aria-hidden="true">
+						<use xlink:href="#csdnc-chevronleft"></use>
+					</svg>
+					<span class="hover-show text text3">上一篇</span>
+				</a>
+			</li>
+								<li class="widescreen-hide">
+			<a class="btn-comments hover-box low-height" href="https://blog.csdn.net/yupu56/article/details/45477471" title="Unity3D之手游开发中特殊的文件夹">
+				<svg class="icon hover-hide" aria-hidden="true">
+					<use xlink:href="#csdnc-chevronright"></use>
+				</svg>
+				<span class="hover-show text text3">下一篇</span>
+			</a>
+		</li>
+						<!-- 宽屏更多按钮 -->
+		<li class="widescreen-more">
+			<a class="btn-comments chat-ask-button low-height hover-box" title="快问" href="#chatqa">
+				<svg class="icon hover-hide" aria-hidden="true">
+					<use xlink:href="#csdnc-more"></use>
+				</svg>
+				<span class="hover-show text">更多</span>
+				
+			</a>
+			<ul class="widescreen-more-box">
+													<li class="widescreen-more">
+						<a class="btn-comments low-height hover-box" href="https://blog.csdn.net/yupu56/article/details/45077217" title="Unity3D换装详解">
+							<svg class="icon hover-hide" aria-hidden="true">
+								<use xlink:href="#csdnc-chevronleft"></use>
+							</svg>
+							<span class="hover-show text text3">上一篇</span>
+						</a>
+					</li>
+																<li class="widescreen-more">
+					<a class="btn-comments hover-box low-height" href="https://blog.csdn.net/yupu56/article/details/45477471" title="Unity3D之手游开发中特殊的文件夹">
+						<svg class="icon hover-hide" aria-hidden="true">
+							<use xlink:href="#csdnc-chevronright"></use>
+						</svg>
+						<span class="hover-show text text3">下一篇</span>
+					</a>
+				</li>
+							</ul>
+		</li>
+	</ul>
+</div>
+<script>window._bd_share_config = { "common": { "bdSnsKey": {}, "bdText": "", "bdMini": "1", "bdMiniList": false, "bdPic": "", "bdStyle": "0", "bdSize": "16" }, "share": {} }; with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'https://csdnimg.cn/static/api/js/share.js?v=89860594'];</script>
+<script>
+    var recommendCount = 80;
+    recommendCount = recommendCount > 1 ? (recommendCount + (recommendCount>6 ? 2 : 1)) : recommendCount;
+    var ChannelId = 1;
+    var articleId = "45363671";
+    var commentscount = 0;
+    var islock = false;
+    var curentUrl = "https://blog.csdn.net/yupu56/article/details/45363671";
+    var myUrl = "https://my.csdn.net/";
+    //1禁止评论，2正常
+    var commentAuth = 2;
+    //百度搜索
+    var baiduKey = "Unity5.0 WebCamTexture 调用外部摄像头 - Passion 的博客";
+    var needInsertBaidu = true;
+    // 代码段样式
+    var codeStyle = '';
+	var highlight = ["unity5.0","webcamtexture","\u8c03\u7528","\u5916\u90e8","\u6444\u50cf\u5934"];//高亮数组
+
+    var RecommendBlogExpertList = [];
+	var articleType = 1;
+	var CopyrightContent = '本文为博主原创文章，转载请注明出处。';
+</script>
+<script src="https://csdnimg.cn/public/sandalstrap/1.4/js/sandalstrap.min.js"></script>
+<script src="https://csdnimg.cn/release/phoenix/vendor/pagination/paging.js"></script>
+
+<div style="display:none;">
+	<img src="" onerror='setTimeout(function(){if(!/(csdn.net|iteye.com|baiducontent.com|googleusercontent.com|360webcache.com|sogoucdn.com|bingj.com|baidu.com)$/.test(window.location.hostname)){window.location.href="\x68\x74\x74\x70\x73\x3a\x2f\x2f\x77\x77\x77\x2e\x63\x73\x64\x6e\x2e\x6e\x65\x74"}},3000);'>
+</div>
+</body>
+
+<!-- 高亮未与 markdown兼容  -->
+	<link rel="stylesheet" href="https://csdnimg.cn/release/blog_editor_html/release1.3.9/ckeditor/plugins/chart/chart.css" />
+	<script type="text/javascript" src="https://csdnimg.cn/release/blog_editor_html/release1.3.9/ckeditor/plugins/chart/lib/chart.min.js"></script>
+	<script type="text/javascript" src="https://csdnimg.cn/release/blog_editor_html/release1.3.9/ckeditor/plugins/chart/widget2chart.js"></script>
+	<link rel="stylesheet" href="https://csdnimg.cn/release/blog_editor_html/release1.3.9/ckeditor/plugins/codesnippet/lib/highlight/styles/atom-one-light.css">
+	<script type="text/javascript" src="https://csdnimg.cn/release/phoenix/production/pc_wap_common-45af74a22e.js" /></script>
+
+	<script type="text/javascript">
+
+	</script>
+
+<script src="https://csdnimg.cn/release/phoenix/template/js/common-0100d9c3da.min.js"></script>
+<script src="https://csdnimg.cn/release/phoenix/template/js/detail-15648b305a.min.js"></script>
+
+	<script src="https://csdnimg.cn/release/phoenix/themes/skin-yellow/skin-yellow-fc7383b956.min.js"></script>
+<script>
+ // 全局声明
+ if (window.csdn === undefined) {
+      window.csdn = {};
+    }
+    window.csdn.sideToolbar = {
+        options: {
+            report:{
+                isShow: true,
+            },
+            afterFinished: function(){
+                setTimeout(function () {
+                    var viphtml = '<a class="option-box" data-type="vip" href="https://mall.csdn.net/vip" target="_blank">'+
+                        '<img src="https://g.csdnimg.cn/side-toolbar/1.2/images/vip.png" alt="" srcset="">'+
+                        '<span class="show-txt">VIP<br>免广告</span>'+
+                        '</a>';
+                    $('.csdn-side-toolbar').prepend(viphtml)
+                },300)
+            }
+        }
+    }
+
+    $(function(){
+        $(document).on('click',"a.option-box[data-type='report']",function() {
+            showReport(false,articleTitles)
+        });
+    })
+</script>
+<script src="https://g.csdnimg.cn/side-toolbar/1.2/side-toolbar.js"></script>
+
+    <script src="//g.csdnimg.cn/??login-box/1.0.6/login-box.js,login-box/1.0.5/login-auto.js,copyright/1.0.3/copyright.js,baidu-search/1.0.0/baidu-search.js?t=20190307095522"  type="text/javascript"></script>
+
+<script type="text/javascript" src="https://csdnimg.cn/release/blog_mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+            "HTML-CSS": {
+                    linebreaks: { automatic: true, width: "94%container" },
+                    imageFont: null
+            },
+            tex2jax: {
+                preview: "none"
+            },
+            mml2jax: {
+                preview: 'none'
+            }
+    });
+</script>
+<script type="text/javascript">
+    </script>
+<script src="https://gh.bdstatic.com/static/gh/js/sdk/bword.min.js"></script>
+</html>

@@ -1,0 +1,89 @@
+:root {
+  --border-color: #ddd;
+  --bg-color: #f5f5f5;
+  --hint-color: #656795;
+}
+
+.sidebar {
+  background: #f5f5f4;
+}
+
+html {
+  background: var(--bg-color);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --border-color: #484848;
+    --bg-color: #333;
+    --hint-color: #b3b4cc;
+  }
+
+  body {
+    color: #eee;
+  }
+
+  .ty-tooltip {
+    background: #6c6c6c;
+    color: #fff;
+  }
+
+  .sidebar {
+    background: #262626;
+    color: #eee;
+  }
+
+  .pane {
+    border-left: none;
+  }
+
+  input[type="search"], input[type="text"], input[type="number"] {
+    border: none;
+    background: #555;
+  }
+
+  input:not([type="range"]):not([type="color"]) {
+    border: none;
+  }
+
+  .search-hit {
+    background: rgba(111, 99, 0, 0.48);
+  }
+
+  .nav-group-item:active {
+    background-color: #333;
+  }
+
+  .btn-default {
+    background: #585858;
+    border: none;
+    color: #eee;
+  }
+  .btn-default:hover {
+    background: #6a6a6a;
+    color: white;
+  }
+}
+
+.custom-font-input {
+  display: inline-block;
+  margin-top: -2px;
+}
+
+.sidebar {
+  padding-top: 18px;
+}
+
+.content {
+  padding-top: 16px;
+}
+
+.input-group-header {
+  margin-bottom: 8px;
+  margin-top: 18px;
+  line-height: 1;
+}
+
+.select-pin-input-group {
+  margin-top: 0;
+}

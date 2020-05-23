@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+    <title>Updates</title>
+    <style type="text/css">
+      html, body {
+        height: 100%;
+      }
+
+      body {
+        background: white;
+        margin: 0;
+        overflow: hidden;
+        font-size: 11pt;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .footer {
+        background: #f2f2f2;
+        border-top: 1px solid #ddd;
+      }
+
+      .footer .btn-group {
+        height: 48px;
+        display: flex;
+        align-items: center;
+      }
+
+      .footer .checkbox {
+        padding: 8px;
+        padding-bottom: 0;
+      }
+
+      iframe, webview {
+        border: 0;
+        width: 100%;
+        flex-grow: 1;
+        height: auto;
+      }
+
+      button {
+        border: #c3c3c3 1px solid;
+        color: #212121;
+        background: #e1e1e1;
+        color: #212121;
+        padding: 4px 12px;
+        text-align: center;
+        vertical-align: middle;
+        margin-right: 4px;
+        margin-left: 4px;
+        font-family: "Segoe UI", sans-serif;
+        transition: 0.6s;
+      }
+
+      button:last-child {
+        margin-right: 8px;
+      }
+
+      button:first-child {
+        margin-left: 8px;
+      }
+
+      .btn-prinmary {
+        /*background: #2e7ec7;
+        color: #FFFFFF;*/
+        border: 1px solid #2e7ec7;
+        outline:#2e7ec7 solid 1px; 
+      }
+
+      button:hover {
+        background: #e5f1fb;
+        border: 1px solid #2e7ec7;
+      }
+
+      .sum {
+        padding: 8px;
+        padding: 16px 8px;
+        font-size: 16px;
+        background: #f2f2f2;
+      }
+    </style>
+	</head>
+	<body>
+    <script type="text/javascript">
+      var electron = require("electron").remote,
+        app = electron.app,
+        updater = app.updater;
+
+      window.onCancelUpdate = function() {
+        updater.cancelUpdate()
+        electron.getCurrentWindow().close();
+      }
+
+      window.onSkipUpdate = function() {
+        updater.skipUpdate()
+        electron.getCurrentWindow().close();
+      }
+
+      window.onDownloadUpdate = function() {
+        updater.downloadUpdate()
+      }
+
+      window.toggleAutoUpdate = function(e) {
+        app.setting.put("enableAutoUpdate", e.target.checked)
+      }
+
+      window.isAutoUpdateEnabled = app.setting.get("enableAutoUpdate");
+      if(isAutoUpdateEnabled == undefined) window.isAutoUpdateEnabled = true;
+    </script>
+    <div class="sum" id="sum"></div>
+    <iframe id="release-panel" src="https://www.typora.io/windows/dev_release.html" sandbox="allow-popups" ></iframe>
+    <div class="footer">
+    <div class="checkbox">
+        <label><input type="checkbox" id="preference-enable-auto-update"><span data-label="0">Check updates automatically</span></label>
+      </div>
+      <div class="btn-group">
+        <div style="flex-grow: 2; min-height: 10px;min-width: 10px;">
+          <button onClick="onSkipUpdate()" data-label="1" >Skip This Version</button>
+        </div>
+        
+        <button onClick="onCancelUpdate()" data-label="2" >Remind Me Later</button>
+        <button class="btn-prinmary" onClick="onDownloadUpdate()" data-label="3" >Download Update</button>
+      </div>
+    </div>
+    <script type="text/javascript">
+      var curVersion = /[?&]curVersion=([^&]+)/.exec(window.location.search)[1];
+      var newVersion = /[?&]newVersion=([^&]+)/.exec(window.location.search)[1];
+      var labels = JSON.parse(decodeURIComponent(/[?&]labels=([^&]+)/.exec(window.location.search)[1]));
+
+      document.querySelector("#sum").innerText = labels[4] + " " + labels[5].replace("$1", newVersion).replace("$2", curVersion);
+      document.querySelectorAll("[data-label]").forEach(function(dom){
+        dom.innerHTML = labels[dom.getAttribute("data-label") - 0];
+      });
+
+      var autoUpdateInput = document.querySelector("#preference-enable-auto-update")
+      autoUpdateInput.checked = !!isAutoUpdateEnabled;
+      autoUpdateInput.onchange = toggleAutoUpdate;
+    </script>
+	</body>

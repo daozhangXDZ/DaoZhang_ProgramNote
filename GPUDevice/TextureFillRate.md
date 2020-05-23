@@ -1,0 +1,17 @@
+# Texture Fill-Rate
+
+The texture filter rate of the GPU is representative of how many  pixels (specifically 'texels') the GPU can render per second. This value  is always represented as a measurement over time (1s). A 144.1GT/s  texture fill rate comes out to 144.1 billion texels (textured picture  elements) per second. At its inception, the fill-rate was a simpler spec  to define: It represented the count of "complete" pixels (that is,  pixels that have been completely filtered) that can be stored in the  framebuffer (GPU memory). To this end, the [texture fill-rate](https://www.gamersnexus.net/dictionary/8-texture-fill-rate) was strictly representative of the number of on-screen pixels that were filtered and written to the buffer.
+
+With modern hardware, off-screen textures can be filtered and  rendered before the user even sees them to ensure a smoother transition  and framerate when the camera pans next frame. In talking with some  video game artists in the industry, we were also able to ascertain a few  instances where off-screen texel pre-filtration and rendering could  benefit developers. One of these instances includes reflections,  whereupon an off-screen object (a tower) may be reflected by an  on-screen reflective surface (water, metal). The reflective surfaces of  cars and mirrors are other easy examples.
+
+*Texture Filter Rate = Core Clock \* TMUs.* 
+
+In the case of the GTX 980's GM204 chip, that would be 128 TMUs *  1126 = 144128. Note that the 1126 clock speed is measured as MHz, or  millions of oscillations per second, so that'd actually be 128 * 1126MHz  = 144.1GT/s; in other numbers, 128 * 1126 * (1000/s) = 144.1GT/s.
+
+Although this formula is straight-forward for some modern hardware,  AMD has a different approach to the texture fill-rate. A GM204 GPU  (bilinearly) filters 128 texels per clock cycle (integer or floating  point 16), effectively 1 texel per TMU per clock cycle (resulting in the  numbers above). A Hawaii GPU filters 176 texels per clock cycle (INT)  and just 88 texels per clock cycle (FP16), so depending on the task at  hand and type of filtration, the theoretical max texture fill rate will  vary on this hardware.
+
+**Note:** The architecture is vastly different between  competing manufacturers and the texture fill-rate cannot be linearly  compared without factoring-in other technologies.
+
+Most users will never come close to exceeding that 144GT/s pipe.  Let's assume a 4K screen resolution. That'd be 3840x2160 pixels, or  nearly 8.3 million pixels. Consider next that we're attempting to draw  these pixels at a minimum frequency of 60 FPS (60 times per second), and  now we're at 498 million pixels drawn per second. Texture filtering  becomes more complex and demanding when using different filtration  technologies in games, like bilinear, trilinear, and [anisotropic filtering](https://www.gamersnexus.net/dictionary/7-game-graphics-settings/44-anisotropic-filtering). Throw  an extra 4X filtering on there for good measure, and now we're at just  1.99B pixels per second. Modern game graphics effects will begin to more  heavily saturate this pipe in other ways, like off-screen texture  filtering / rendering for use in an on-screen fashion (as described  above with pools and cars).
+
+Texture Filter Rate does not hold the relevance it once did, but is  still a critical aspect of graphics processing. Users shouldn't get too  hung up over the texture fill-rate from one card to the next given the  above examples.

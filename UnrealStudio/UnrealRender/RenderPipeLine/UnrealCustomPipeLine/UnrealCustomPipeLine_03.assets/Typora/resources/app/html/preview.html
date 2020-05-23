@@ -1,0 +1,34 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><title>Typora</title><link rel="stylesheet" href="../lib/bootstrape/css/bootstrap.css"><link rel="stylesheet" href="../style/base.css"><link rel="stylesheet" href="../style/base-control.css"><link rel="stylesheet" href="" id="theme_css" title="theme_css"><style type="text/css">html {
+        zoom: 0.7;
+        width: 400px;
+        display: block;
+        padding-left: 16px;
+        overflow: hidden;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+	    user-select: none;
+	    cursor: pointer;
+    }
+    body {
+    	padding-top:16px;
+    }
+    h1 {
+    	margin-top:0;
+    	padding-top:0;
+    	text-align: left !important;
+    }</style></head><body><h1>Typora</h1><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ac massa eros. Proin ac elit ut lorem sodales varius.</p><blockquote>Morbi lectus ante, venenatis eu mattis quis, maximus et mi.</blockquote><ol><li><p>Nam vitae bibendum dolor</p></li><li><p>Morbi lectus ante, venenatis eu mattis quis, maximus et mi. Praesent tempor diam non risus commodo, eu laoreet nulla faucibus.</p></li></ol><p>Morbi lectus ante, venenatis eu mattis quis, maximus et mi. Praesent tempor diam non risus commodo, eu laoreet nulla faucibus. Nam vitae bibendum dolor, ut sollicitudin massa. Etiam molestie iaculis ullamcorper. Ut tellus lectus, luctus non magna et, elementum facilisis urna. Nulla sit amet eros nisl. Nam vitae scelerisque massa. Nam sodales justo libero, et scelerisque leo pharetra in. Suspendisse non tincidunt ipsum.</p><script type="text/javascript">var camelize = function(str) {
+	      return str.replace(/(?:^|_|-)(\w)/g, function(letter, p1, index) {
+	        return p1.toUpperCase();
+	      });
+	    },
+	    getUrlParam = function (name) {
+	        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+	        var r = window.location.search.substr(1).match(reg);
+	        if (r != null) return unescape(r[2]); return null;
+	    },
+	    themeFolder = getUrlParam("folder"),
+	    themeCss = getUrlParam("css"),
+	    themeName = camelize(themeCss).replace(/\.css$/, '');
+
+	document.querySelector("h1").textContent = themeName;
+	document.querySelector("#theme_css").setAttribute("href", "file://" + themeFolder + "/" + themeCss);</script></body></html>
